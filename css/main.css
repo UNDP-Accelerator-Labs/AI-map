@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+/*
+$c-dark-blue: #005687;
+$c-mid-blue: #0468B1;
+$c-mid-blue-semi: rgba(4,104,177,.75);
+$c-light-blue: #32BEE1;
+
+$c-dark-red: #A51E41;
+$c-mid-red: #FA1C26;
+$c-light-red: #F03C8C;
+
+$c-dark-green: #418246;
+$c-mid-green: #61B233;
+$c-light-green: #B4DC28;
+
+$c-dark-yellow: #FA7814;
+$c-mid-yellow: #FFC10E;
+$c-light-yellow: #FFF32A;
+
+$c-dark-grey: #000000;
+$c-mid-grey: #646464;
+$c-light-grey: #969696;
+*/
+
+body {
+	padding: 0;
+	margin: 0;
+	font-family: 'Noto Sans';
+}
+
+svg {
+	width: 100vw;
+	height: 100vh;
+}
+.node text {
+	pointer-events: none;
+}
+circle.bg {
+	cursor: pointer;
+}
+.orbit.primary,
+.orbit.secondary {
+	opacity: 0;
+}
+.node.primary {
+	font-weight: bold;
+	font-size: 24px;
+}
+.node.tech:hover > circle:not(.bg),
+.node.tech:hover > line {
+	stroke: #A51E41;
+}
+.node.tech:hover > text {
+	fill: #A51E41;
+}
+.node.tech .leaf:hover circle:not(.bg),
+.node.tech .leaf:hover line {
+	stroke: #FA1C26;
+}
+.node.tech .leaf:hover > text {
+	fill: #FA1C26;
+}
+.node.policy:hover > circle:not(.bg),
+.node.policy:hover > line {
+	stroke: #005687;
+}
+.node.policy:hover > text {
+	fill: #005687;
+}
+.node.policy .leaf:hover circle:not(.bg),
+.node.policy .leaf:hover line {
+	stroke: #0468B1;
+}
+.node.policy .leaf:hover text {
+	fill: #0468B1;
+}
+.node.application:hover > circle:not(.bg),
+.node.application:hover > line {
+	stroke: #418246;
+}
+.node.application:hover > text {
+	fill: #418246;
+}
+.node.application .leaf:hover circle:not(.bg),
+.node.application .leaf:hover line {
+	stroke: #61B233;
+}
+.node.application .leaf:hover text {
+	fill: #61B233;
+}
+.node.secondary {
+	font-weight: medium;
+	font-size: 24px;	
+}
+.node rect.bg {
+	pointer-events: none;
+}
+.leaf {
+	font-weight: bold;
+	font-size: 18px;
+}
+.leaf text {
+	opacity: 0;
+}
+g.title text {
+	font-weight: bold;
+	font-size: 24px;
+	opacity: 0;
+}
+g.title text .emph {
+	font-size: 36px;
+}

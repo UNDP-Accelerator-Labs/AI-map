@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 27.5.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 1500 1325" style="enable-background:new 0 0 1500 1325;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#000000;stroke-width:0.5;stroke-miterlimit:10;}
+	.st1{fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;}
+	.st2{fill:#FFFFFF;}
+	.st3{font-family:'NotoSans-Bold';}
+	.st4{font-size:24px;}
+	.st5{fill:none;stroke:#000000;stroke-width:3;stroke-miterlimit:10;}
+	.st6{font-family:'NotoSans-Medium';}
+	.st7{fill:none;stroke:#000000;stroke-miterlimit:10;}
+	.st8{font-size:18px;}
+	.st9{font-size:36px;}
+</style>
+<ellipse class="st0" cx="761.1" cy="595" rx="551.2" ry="255.4"/>
+<circle class="st1" cx="760.8" cy="662.7" r="325"/>
+<g class='node primary tech'>
+	<circle class="st2" cx="479.5" cy="825.1" r="50"/>
+	<text transform="matrix(1 0 0 1 448.9745 833.0027)" class="st3 st4">TECH</text>
+	<line class="st1" x1="449.5" y1="843" x2="509.5" y2="843"/>
+	<circle class="st5" cx="479.5" cy="825.1" r="87.5"/>
+	<g class='leaves'>
+		<circle class="st7" cx="479.5" cy="825.1" r="175"/>
+		<g class='leaf'>
+			<circle class="st2" cx="631" cy="737.6" r="50"/>
+			<circle class="st1" cx="631" cy="737.6" r="62.5"/>
+			<text transform="matrix(1 0 0 1 598.3785 742.5169)" class="st3 st8">models</text>
+			<line class="st7" x1="608.2" y1="752.5" x2="653.2" y2="752.5"/>
+		</g>
+		<g class='leaf'>
+			<circle class="st2" cx="327.9" cy="737.6" r="50"/>
+			<circle class="st1" cx="327.9" cy="737.6" r="62.5"/>
+			<text transform="matrix(1 0 0 1 307.4375 742.5169)" class="st3 st8">data</text>
+			<line class="st7" x1="305.1" y1="752.5" x2="350.1" y2="752.5"/>
+		</g>
+		<g class='leaf'>
+			<circle class="st1" cx="479.5" cy="1000.1" r="62.5"/>
+			<rect x="429.5" y="974.1" class="st2" width="125" height="50"/>
+			<circle class="st2" cx="479.5" cy="1000.1" r="50"/>
+			<text transform="matrix(1 0 0 1 441.7623 1005.0169)" class="st3 st8">production</text>
+			<line class="st7" x1="456.7" y1="1015" x2="501.7" y2="1015"/>
+		</g>
+	</g>
+</g>
+<g class='node primary policy'>
+	<circle class="st2" cx="760.8" cy="337.7" r="62.5"/>
+	<circle class="st5" cx="760.8" cy="337.7" r="87.5"/>
+	<text transform="matrix(1 0 0 1 717.109 342.6029)" class="st3 st4">POLICY</text>
+	<line class="st1" x1="730.8" y1="352.8" x2="790.8" y2="352.8"/>
+	<g class='leaves'>
+		<circle class="st7" cx="760.8" cy="337.7" r="175"/>
+		<g class='leaf'>
+			<circle class="st2" cx="761.1" cy="162.7" r="50"/>
+			<circle class="st1" cx="761.1" cy="162.7" r="62.5"/>
+			<text transform="matrix(1 0 0 1 721.5884 167.6029)" class="st3 st8">enabling</text>
+			<line class="st7" x1="738.3" y1="177.6" x2="783.3" y2="177.6"/>
+		</g>
+		<g class='leaf'>
+			<circle class="st2" cx="761.1" cy="512.7" r="50"/>
+			<circle class="st1" cx="761.1" cy="512.7" r="62.5"/>
+			<rect x="688.6" y="487.7" class="st2" width="125" height="50"/>
+			<text transform="matrix(1 0 0 1 694.0293 517.6028)" class="st3 st8">constraining</text>
+			<line class="st7" x1="738.3" y1="527.6" x2="783.3" y2="527.6"/>
+		</g>
+	</g>
+</g>
+<g class='node primary application'>
+	<circle class="st5" cx="1042.4" cy="825.3" r="87.5"/>
+	<circle class="st2" cx="1042.4" cy="825.3" r="50"/>
+	<rect x="981.1" y="800.3" class="st2" width="182.7" height="50"/>
+	<line class="st1" x1="1019.5" y1="843" x2="1079.5" y2="843"/>
+	<text transform="matrix(1 0 0 1 988.9603 832.648)" class="st3 st4">APPLICATION</text>
+	<g class='leaves'>
+		<ellipse transform="matrix(0.7071 -0.7071 0.7071 0.7071 -278.1527 978.7534)" class="st7" cx="1042.4" cy="825.1" rx="175" ry="175"/>
+		<g class='leaf'>
+			<circle class="st2" cx="867.3" cy="825.1" r="50"/>
+			<circle class="st1" cx="867.3" cy="825.1" r="62.5"/>
+			<text transform="matrix(1 0 0 1 836.4329 830.0172)" class="st3 st8">critical</text>
+			<line class="st7" x1="844.6" y1="840" x2="889.6" y2="840"/>
+		</g>
+		<g class='leaf'>
+			<circle class="st2" cx="1042.4" cy="1000.1" r="50"/>
+			<circle class="st1" cx="1042.4" cy="1000.1" r="62.5"/>
+			<text transform="matrix(1 0 0 1 1006.4565 1005.0169)" class="st3 st8">analytic</text>
+			<line class="st7" x1="1019.6" y1="1015" x2="1064.6" y2="1015"/>
+		</g>
+		<g class='leaf'>
+			<circle class="st2" cx="1042.4" cy="650.1" r="50"/>
+			<circle class="st1" cx="1042.4" cy="650.1" r="62.5"/>
+			<text transform="matrix(1 0 0 1 1005.8267 655.0172)" class="st3 st8">creative</text>
+			<line class="st7" x1="1019.6" y1="665" x2="1064.6" y2="665"/>
+		</g>
+		<g class='leaf'>
+			<circle class="st2" cx="1217.4" cy="825.1" r="50"/>
+			<circle class="st1" cx="1217.4" cy="825.1" r="62.5"/>
+			<text transform="matrix(1 0 0 1 1213.0907 830.0172)" class="st3 st8">?</text>
+			<line class="st7" x1="1194.6" y1="840" x2="1239.6" y2="840"/>
+		</g>
+	</g>
+</g>
+<g class='node secondary infrastructure'>
+	<circle class="st0" cx="209.9" cy="595" r="87.5"/>
+	<rect x="100.3" y="566.4" class="st2" width="182.7" height="50"/>
+	<circle class="st2" cx="209.9" cy="595" r="62.5"/>
+	<text transform="matrix(1 0 0 1 108.737 599.8358)" class="st6 st4">Infrastructure</text>
+	<line class="st7" x1="179.9" y1="610.1" x2="239.9" y2="610.1"/>
+</g>
+<g class='node secondary business'>
+	<circle class="st2" cx="1312.2" cy="595" r="62.5"/>
+	<circle class="st0" cx="1312.2" cy="595" r="87.5"/>
+	<text transform="matrix(1 0 0 1 1261.6829 599.8358)" class="st6 st4">Business</text>
+	<line class="st7" x1="1282.2" y1="610.1" x2="1342.2" y2="610.1"/>
+</g>
+<g class='title'>
+	<text transform="matrix(1 0 0 1 741.6306 1157.8423)"><tspan x="0" y="0" class="st3 st9">AI</tspan><tspan x="-68.8" y="28.8" class="st3 st4">possible areas  </tspan><tspan x="-71" y="57.6" class="st3 st4">of intervention</tspan></text>
+	<g>
+		<circle cx="760.8" cy="662.7" r="5"/>
+		<line class="st1" x1="760.8" y1="662.7" x2="760.8" y2="1112"/>
+	</g>
+</g>
+</svg>

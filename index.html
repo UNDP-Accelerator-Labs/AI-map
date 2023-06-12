@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<script src='https://cdn.jsdelivr.net/npm/d3@5'></script>
+	<script src='https://d3js.org/d3-selection-multi.v1.min.js'></script>
+	
+	<link rel='stylesheet' type='text/css' href='css/main.css'>
+	<style type='text/css'>
+		
+
+
+		.st0{fill:none;stroke:#000000;stroke-width:0.5;stroke-miterlimit:10;}
+		.st1{fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;}
+		.st2{fill:#FFFFFF;}
+		.st5{fill:none;stroke:#000000;stroke-width:3;stroke-miterlimit:10;}
+		.st7{fill:none;stroke:#000000;stroke-miterlimit:10;}
+
+
+	</style>
+
+</head>
+
+<body>
+	<svg version='1.1' id='map' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px'
+			 viewBox='0 0 1500 1325' preserveAspectRatio='xMidYMid meet'>
+		<circle class='st1 orbit primary' cx='760.8' cy='662.7' r=0 data-r='325'/>
+		<ellipse class='st0 orbit secondary' cx='761.1' cy='595' rx=0 ry=0 data-rx='551.2' data-ry='255.4'/>
+		<g class='node primary tech'>
+			<circle class='st2 bg' cx='479.5' cy='825.1' r='50'/>
+			<circle class='st5' cx='479.5' cy='825.1' r='87.5'/>
+			<text transform='matrix(1 0 0 1 448.9745 833.0027)'>TECH</text>
+			<line class='st1 underline' x1='449.5' y1='843' x2='509.5' y2='843'/>
+			
+			<g class='leaves'>
+				<circle class='st7 orbit' cx='479.5' cy='825.1' r=0 data-r='175'/>
+				<g class='leaf'>
+					<circle class='st1' cx='631' cy='737.6' r=0 data-r='62.5'/>
+					<circle class='st2 bg' cx='631' cy='737.6' r=0 data-r='50'/>
+					<text transform='matrix(1 0 0 1 598.3785 742.5169)'>models</text>
+					<line class='st7 underline' x1='608.2' y1='752.5' x2='608.2' data-x2='653.2' y2='752.5'/>
+				</g>
+				<g class='leaf'>
+					<circle class='st1' cx='327.9' cy='737.6' r=0 data-r='62.5'/>
+					<circle class='st2 bg' cx='327.9' cy='737.6' r=0 data-r='50'/>
+					<text transform='matrix(1 0 0 1 307.4375 742.5169)'>data</text>
+					<line class='st7 underline' x1='305.1' y1='752.5' x2='305.1' data-x2='350.1' y2='752.5'/>
+				</g>
+				<g class='leaf'>
+					<circle class='st1' cx='479.5' cy='1000.1' r=0 data-r='62.5'/>
+					<rect x='429.5' y='974.1' class='st2 bg' width='125' height='50'/>
+					<circle class='st2 bg' cx='479.5' cy='1000.1' r=0 data-r='50'/>
+					<text transform='matrix(1 0 0 1 441.7623 1005.0169)'>production</text>
+					<line class='st7 underline' x1='456.7' y1='1015' x2='456.7' data-x2='501.7' y2='1015'/>
+				</g>
+			</g>
+		</g>
+		<g class='node primary policy'>
+			<circle class='st5' cx='760.8' cy='337.7' r='87.5'/>
+			<circle class='st2 bg' cx='760.8' cy='337.7' r='50'/>
+			<text transform='matrix(1 0 0 1 717.109 342.6029)'>POLICY</text>
+			<line class='st1' x1='730.8' y1='352.8' x2='790.8' y2='352.8'/>
+			
+			<g class='leaves'>
+				<circle class='st7' cx='760.8' cy='337.7' r=0 data-r='175'/>
+				<g class='leaf'>
+					<circle class='st1' cx='761.1' cy='162.7' r=0 data-r='62.5'/>
+					<circle class='st2 bg' cx='761.1' cy='162.7' r=0 data-r='50'/>
+					<text transform='matrix(1 0 0 1 721.5884 167.6029)'>enabling</text>
+					<line class='st7 underline' x1='738.3' y1='177.6' x2='738.3' data-x2='783.3' y2='177.6'/>
+				</g>
+				<g class='leaf'>
+					<circle class='st1' cx='761.1' cy='512.7' r=0 data-r='62.5'/>
+					<circle class='st2 bg' cx='761.1' cy='512.7' r=0 data-r='50'/>
+					<rect x='688.6' y='487.7' class='st2 bg' width='125' height='50'/>
+					<text transform='matrix(1 0 0 1 694.0293 517.6028)'>constraining</text>
+					<line class='st7 underline' x1='738.3' y1='527.6' x2='738.3' data-x2='783.3' y2='527.6'/>
+				</g>
+			</g>
+		</g>
+		<g class='node primary application'>
+			<circle class='st5' cx='1042.4' cy='825.3' r='87.5'/>
+			<circle class='st2 bg' cx='1042.4' cy='825.3' r='50'/>
+			<rect x='981.1' y='800.3' class='st2 bg' width='182.7' height='50'/>
+			<text transform='matrix(1 0 0 1 988.9603 832.648)'>APPLICATION</text>
+			<line class='st1' x1='1019.5' y1='843' x2='1079.5' y2='843'/>
+			
+			<g class='leaves'>
+				<circle class='st7' cx='1042.4' cy='825.1' r=0 data-r='175'/>
+				<g class='leaf'>
+					<circle class='st1' cx='867.3' cy='825.1' r=0 data-r='62.5'/>
+					<circle class='st2 bg' cx='867.3' cy='825.1' r=0 data-r='50'/>
+					<text transform='matrix(1 0 0 1 836.4329 830.0172)'>critical</text>
+					<line class='st7 underline' x1='844.6' y1='840' x2='844.6' data-x2='889.6' y2='840'/>
+				</g>
+				<g class='leaf'>
+					<circle class='st1' cx='1042.4' cy='1000.1' r=0 data-r='62.5'/>
+					<circle class='st2 bg' cx='1042.4' cy='1000.1' r=0 data-r='50'/>
+					<text transform='matrix(1 0 0 1 1006.4565 1005.0169)'>analytic</text>
+					<line class='st7 underline' x1='1019.6' y1='1015' x2='1019.6' data-x2='1064.6' y2='1015'/>
+				</g>
+				<g class='leaf'>
+					<circle class='st1' cx='1042.4' cy='650.1' r=0 data-r='62.5'/>
+					<circle class='st2 bg' cx='1042.4' cy='650.1' r=0 data-r='50'/>
+					<text transform='matrix(1 0 0 1 1005.8267 655.0172)'>creative</text>
+					<line class='st7 underline' x1='1019.6' y1='665' x2='1019.6' data-x2='1064.6' y2='665'/>
+				</g>
+				<g class='leaf'>
+					<circle class='st1' cx='1217.4' cy='825.1' r=0 data-r='62.5'/>
+					<circle class='st2 bg' cx='1217.4' cy='825.1' r=0 data-r='50'/>
+					<text transform='matrix(1 0 0 1 1213.0907 830.0172)'>?</text>
+					<line class='st7 underline' x1='1194.6' y1='840' x2='1194.6' data-x2='1239.6' y2='840'/>
+				</g>
+			</g>
+		</g>
+		<g class='node secondary infrastructure'>
+			<circle class='st0' cx='209.9' cy='595' r='87.5'/>
+			<rect x='100.3' y='566.4' class='st2 bg' width='182.7' height='50'/>
+			<circle class='st2' cx='209.9' cy='595' r='62.5'/>
+			<text transform='matrix(1 0 0 1 108.737 599.8358)'>Infrastructure</text>
+			<line class='st7' x1='179.9' y1='610.1' x2='239.9' y2='610.1'/>
+		</g>
+		<g class='node secondary business'>
+			<circle class='st2' cx='1312.2' cy='595' r='62.5'/>
+			<circle class='st0' cx='1312.2' cy='595' r='87.5'/>
+			<text transform='matrix(1 0 0 1 1261.6829 599.8358)'>Business</text>
+			<line class='st7' x1='1282.2' y1='610.1' x2='1342.2' y2='610.1'/>
+		</g>
+		<g class='title'>
+			<text transform='matrix(1 0 0 1 741.6306 1157.8423)'>
+				<tspan x='0' y='0' class='emph'>AI</tspan>
+				<tspan x='-68.8' y='28.8'>possible areas  </tspan>
+				<tspan x='-71' y='57.6'>of intervention</tspan>
+			</text>
+			<g class='connector'>
+				<circle cx='760.8' cy='662.7' r=0 data-r='5'/>
+				<line class='st1' x1='760.8' y1='662.7' x2='760.8' y2='662.7' data-y2='1112'/>
+			</g>
+		</g>
+	</svg>
+
+	<script type='text/javascript'>
+		// ANIMATE EVERYTHING IN
+		(function animateIn () {
+			d3.select('.orbit.primary')
+			.transition()
+			.duration(750)
+			.attr('r', function () { return d3.select(this).attr('data-r') })
+			.style('opacity', 1)
+			d3.select('.orbit.secondary')
+			.transition()
+			.duration(750)
+			.delay(150)
+			.attrs({
+				'rx': function () { return d3.select(this).attr('data-rx') },
+				'ry': function () { return d3.select(this).attr('data-ry') }
+			}).style('opacity', 1)
+			d3.select('g.title .connector circle')
+			.transition()
+			.duration(500)
+			.attr('r', function () { return d3.select(this).attr('data-r') })
+			d3.select('g.title .connector line')
+			.transition()
+			.duration(500)
+			.delay(250)
+			.attr('y2', function () { return d3.select(this).attr('data-y2') })
+			d3.select('g.title text')
+			.transition()
+			.duration(1000)
+			.delay(250)
+			.style('opacity', 1)
+		})()
+
+
+		d3.selectAll('.node')
+		.on('click', function () {
+			const sel = d3.select(this)
+			sel.classed('expanded', !sel.classed('expanded'))
+			sel.selectAll('.leaves circle')
+				.transition()
+				.duration(500)
+				.delay((d, i) => i * 50)
+					.attr('r', function () { 
+						if (sel.classed('expanded')) return d3.select(this).attr('data-r') 
+						else return 0
+					})
+			sel.selectAll('.leaves .leaf text')
+				.transition()
+				.duration(500)
+				.delay((d, i) => 150 + i * 50)
+				.style('opacity', function () {
+					if (sel.classed('expanded')) return 1
+					else return 0
+				})
+			sel.selectAll('.leaves .leaf .underline')
+				.transition()
+				.duration(500)
+				.delay((d, i) => 300 + i * 150)
+				.attr('x2', function () {
+					if (sel.classed('expanded')) return d3.select(this).attr('data-x2')
+					else return d3.select(this).attr('x1')
+				})
+		})
+	</script>
+</body>
+</html>
