@@ -34,7 +34,7 @@
 		<svg version='1.1' id='map' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px'
 				 viewBox='0 0 1500 1325' preserveAspectRatio='xMidYMid meet'>
 			
-			<ellipse class='st0 orbit secondary' cx='750' cy='604' rx=0 ry=0 data-rx='550' data-ry='255'/>
+			<ellipse class='st0 orbit secondary' cx='750' cy='596' rx=0 ry=0 data-rx='550' data-ry='255'/>
 			
 			<g class='title'>
 				<text transform='matrix(1 0 0 1 741.6306 1157.8423)'>
@@ -285,6 +285,8 @@
 		const g = sel.insertElems(':first-child', 'g', 'leaves')
 		const category = g.datum().category
 		const n = g.datum().types?.length ?? 0
+
+		console.log(g.datum())
 		
 		g.addElems('circle', 'orbit', d => d.types?.length > 0 ? [d] : [])
 		.attr('r', expand ? 0 : orbit_width)
@@ -376,7 +378,7 @@
 
 	(function fetchStructure (category) {
 		addLoader()
-		
+
 		const api_endpoint = new URL('https://script.google.com/macros/s/AKfycbzX-I9BL2fyU0lSlQWmWAL3rwsqR8IfaWPrtIDFNAQGMU6iL3CMJoA1tsO6bp76nPcj/exec')
 		api_endpoint.searchParams.append('req', 'structure')
 
@@ -426,6 +428,8 @@
 		api_endpoint.searchParams.append('req', 'data')
 		api_endpoint.searchParams.append('category', category.toLowerCase())
 		api_endpoint.searchParams.append('type', type.toLowerCase())
+
+		console.log(api_endpoint.href)
 
 		fetch(api_endpoint.href, { method: 'GET' })
 		.then(res => res.json())
