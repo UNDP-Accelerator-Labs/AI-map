@@ -22,30 +22,119 @@ $c-dark-grey: #000000;
 $c-mid-grey: #646464;
 $c-light-grey: #969696;
 */
+html {
+	height: 100%;
+}
 
 body {
+	height: 100%;
 	padding: 0;
 	margin: 0;
 	font-family: 'Noto Sans';
 }
 
+header {
+	display: block;
+	width: 100%;
+	height: 30px;
+	background-color: #005687;
+}
+img#logo {
+	height: 125px;
+	position: absolute;
+	top: 30px;
+	left: 0;
+}
+
+.container {
+	display: flex;
+	width: 100%;
+	height: calc(100% - 30px);
+}
+.left-col {
+	flex: 1 1 0;
+}
+.right-col {
+	flex: 0 1 0;
+	background-color: #005687;
+	transition: flex .5s;
+	color: #FFF;
+}
+.right-col .inner {
+	padding: 2em 4em;
+}
+h1.main-title {
+	margin-bottom: 0;
+}
+h2.sub-title {
+	margin-top: 0;
+	font-weight: normal;
+}
+h3.entry-title {
+	margin-bottom: 0;
+}
+small.contributor {
+	display: block;
+}
+div.entry {
+	padding: 2rem 0;
+	border-bottom: 1px solid #FFF;
+}
+div.tag {
+	display: inline;
+	font-size: 12px;
+	padding: 2px 5px;
+	border: 1px solid #FFF;
+	border-radius: 5px;
+}
+
 svg {
-	width: 100vw;
-	height: 100vh;
+	width: 100%;
+	height: 100%;
 }
 .node text {
 	pointer-events: none;
+	text-anchor: middle;
 }
 circle.bg {
 	cursor: pointer;
+	fill: #FFF;
 }
-.orbit.primary,
-.orbit.secondary {
+circle.outline {
+	fill: none;
+	stroke: #000;
+}
+
+.orbit,
+.orbit {
 	opacity: 0;
+	fill: none;
+	stroke: #000;
+	stroke-width: 1;
+}
+.orbit.primary {
+	stroke-width: 2;
 }
 .node.primary {
 	font-weight: bold;
 	font-size: 24px;
+}
+.node.primary text {
+	text-transform: uppercase;
+}
+.leaf text {
+	text-transform: lowercase !important;
+}
+.node.primary circle.outline {
+	stroke-width: 3;
+}
+.node.primary line.underline {
+	stroke: #000;
+	stroke-width: 2;
+}
+.node.secondary line.underline {
+	stroke: #000;
+	stroke-width: 1;
 }
 .node.tech:hover > circle:not(.bg),
 .node.tech:hover > line {
@@ -76,17 +165,23 @@ circle.bg {
 	fill: #0468B1;
 }
 .node.application:hover > circle:not(.bg),
-.node.application:hover > line {
+.node.application:hover > line,
+.node.application.active > circle:not(.bg),
+.node.application.active > line {
 	stroke: #418246;
 }
-.node.application:hover > text {
+.node.application:hover > text,
+.node.application.active > text {
 	fill: #418246;
 }
 .node.application .leaf:hover circle:not(.bg),
-.node.application .leaf:hover line {
+.node.application .leaf:hover line,
+.node.application .leaf.active circle:not(.bg),
+.node.application .leaf.active line {
 	stroke: #61B233;
 }
-.node.application .leaf:hover text {
+.node.application .leaf:hover text,
+.node.application .leaf.active text {
 	fill: #61B233;
 }
 .node.secondary {
@@ -94,12 +189,14 @@ circle.bg {
 	font-size: 24px;	
 }
 .node rect.bg {
+	fill: #FFF;
 	pointer-events: none;
 }
 .leaf {
 	font-weight: bold;
 	font-size: 18px;
 }
+.node text,
 .leaf text {
 	opacity: 0;
 }

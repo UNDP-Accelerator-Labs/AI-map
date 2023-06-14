@@ -4,8 +4,11 @@
 
 	<script src='https://cdn.jsdelivr.net/npm/d3@5'></script>
 	<script src='https://d3js.org/d3-selection-multi.v1.min.js'></script>
-	
+	<script src='js/d3.prototype.extensions.js'></script>
+
 	<link rel='stylesheet' type='text/css' href='css/main.css'>
+	<link rel='stylesheet' type='text/css' href='css/footer.css'>
+	<link rel='stylesheet' type='text/css' href='css/loader.css'>
 	<style type='text/css'>
 		
 
@@ -22,185 +25,469 @@
 </head>
 
 <body>
-	<svg version='1.1' id='map' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px'
-			 viewBox='0 0 1500 1325' preserveAspectRatio='xMidYMid meet'>
-		<circle class='st1 orbit primary' cx='760.8' cy='662.7' r=0 data-r='325'/>
-		<ellipse class='st0 orbit secondary' cx='761.1' cy='595' rx=0 ry=0 data-rx='551.2' data-ry='255.4'/>
-		<g class='node primary tech'>
-			<circle class='st2 bg' cx='479.5' cy='825.1' r='50'/>
-			<circle class='st5' cx='479.5' cy='825.1' r='87.5'/>
-			<text transform='matrix(1 0 0 1 448.9745 833.0027)'>TECH</text>
-			<line class='st1 underline' x1='449.5' y1='843' x2='509.5' y2='843'/>
-			
-			<g class='leaves'>
-				<circle class='st7 orbit' cx='479.5' cy='825.1' r=0 data-r='175'/>
-				<g class='leaf'>
-					<circle class='st1' cx='631' cy='737.6' r=0 data-r='62.5'/>
-					<circle class='st2 bg' cx='631' cy='737.6' r=0 data-r='50'/>
-					<text transform='matrix(1 0 0 1 598.3785 742.5169)'>models</text>
-					<line class='st7 underline' x1='608.2' y1='752.5' x2='608.2' data-x2='653.2' y2='752.5'/>
-				</g>
-				<g class='leaf'>
-					<circle class='st1' cx='327.9' cy='737.6' r=0 data-r='62.5'/>
-					<circle class='st2 bg' cx='327.9' cy='737.6' r=0 data-r='50'/>
-					<text transform='matrix(1 0 0 1 307.4375 742.5169)'>data</text>
-					<line class='st7 underline' x1='305.1' y1='752.5' x2='305.1' data-x2='350.1' y2='752.5'/>
-				</g>
-				<g class='leaf'>
-					<circle class='st1' cx='479.5' cy='1000.1' r=0 data-r='62.5'/>
-					<rect x='429.5' y='974.1' class='st2 bg' width='125' height='50'/>
-					<circle class='st2 bg' cx='479.5' cy='1000.1' r=0 data-r='50'/>
-					<text transform='matrix(1 0 0 1 441.7623 1005.0169)'>production</text>
-					<line class='st7 underline' x1='456.7' y1='1015' x2='456.7' data-x2='501.7' y2='1015'/>
-				</g>
-			</g>
-		</g>
-		<g class='node primary policy'>
-			<circle class='st5' cx='760.8' cy='337.7' r='87.5'/>
-			<circle class='st2 bg' cx='760.8' cy='337.7' r='50'/>
-			<text transform='matrix(1 0 0 1 717.109 342.6029)'>POLICY</text>
-			<line class='st1' x1='730.8' y1='352.8' x2='790.8' y2='352.8'/>
-			
-			<g class='leaves'>
-				<circle class='st7' cx='760.8' cy='337.7' r=0 data-r='175'/>
-				<g class='leaf'>
-					<circle class='st1' cx='761.1' cy='162.7' r=0 data-r='62.5'/>
-					<circle class='st2 bg' cx='761.1' cy='162.7' r=0 data-r='50'/>
-					<text transform='matrix(1 0 0 1 721.5884 167.6029)'>enabling</text>
-					<line class='st7 underline' x1='738.3' y1='177.6' x2='738.3' data-x2='783.3' y2='177.6'/>
-				</g>
-				<g class='leaf'>
-					<circle class='st1' cx='761.1' cy='512.7' r=0 data-r='62.5'/>
-					<circle class='st2 bg' cx='761.1' cy='512.7' r=0 data-r='50'/>
-					<rect x='688.6' y='487.7' class='st2 bg' width='125' height='50'/>
-					<text transform='matrix(1 0 0 1 694.0293 517.6028)'>constraining</text>
-					<line class='st7 underline' x1='738.3' y1='527.6' x2='738.3' data-x2='783.3' y2='527.6'/>
-				</g>
-			</g>
-		</g>
-		<g class='node primary application'>
-			<circle class='st5' cx='1042.4' cy='825.3' r='87.5'/>
-			<circle class='st2 bg' cx='1042.4' cy='825.3' r='50'/>
-			<rect x='981.1' y='800.3' class='st2 bg' width='182.7' height='50'/>
-			<text transform='matrix(1 0 0 1 988.9603 832.648)'>APPLICATION</text>
-			<line class='st1' x1='1019.5' y1='843' x2='1079.5' y2='843'/>
-			
-			<g class='leaves'>
-				<circle class='st7' cx='1042.4' cy='825.1' r=0 data-r='175'/>
-				<g class='leaf'>
-					<circle class='st1' cx='867.3' cy='825.1' r=0 data-r='62.5'/>
-					<circle class='st2 bg' cx='867.3' cy='825.1' r=0 data-r='50'/>
-					<text transform='matrix(1 0 0 1 836.4329 830.0172)'>critical</text>
-					<line class='st7 underline' x1='844.6' y1='840' x2='844.6' data-x2='889.6' y2='840'/>
-				</g>
-				<g class='leaf'>
-					<circle class='st1' cx='1042.4' cy='1000.1' r=0 data-r='62.5'/>
-					<circle class='st2 bg' cx='1042.4' cy='1000.1' r=0 data-r='50'/>
-					<text transform='matrix(1 0 0 1 1006.4565 1005.0169)'>analytic</text>
-					<line class='st7 underline' x1='1019.6' y1='1015' x2='1019.6' data-x2='1064.6' y2='1015'/>
-				</g>
-				<g class='leaf'>
-					<circle class='st1' cx='1042.4' cy='650.1' r=0 data-r='62.5'/>
-					<circle class='st2 bg' cx='1042.4' cy='650.1' r=0 data-r='50'/>
-					<text transform='matrix(1 0 0 1 1005.8267 655.0172)'>creative</text>
-					<line class='st7 underline' x1='1019.6' y1='665' x2='1019.6' data-x2='1064.6' y2='665'/>
-				</g>
-				<g class='leaf'>
-					<circle class='st1' cx='1217.4' cy='825.1' r=0 data-r='62.5'/>
-					<circle class='st2 bg' cx='1217.4' cy='825.1' r=0 data-r='50'/>
-					<text transform='matrix(1 0 0 1 1213.0907 830.0172)'>?</text>
-					<line class='st7 underline' x1='1194.6' y1='840' x2='1194.6' data-x2='1239.6' y2='840'/>
-				</g>
-			</g>
-		</g>
-		<g class='node secondary infrastructure'>
-			<circle class='st0' cx='209.9' cy='595' r='87.5'/>
-			<rect x='100.3' y='566.4' class='st2 bg' width='182.7' height='50'/>
-			<circle class='st2' cx='209.9' cy='595' r='62.5'/>
-			<text transform='matrix(1 0 0 1 108.737 599.8358)'>Infrastructure</text>
-			<line class='st7' x1='179.9' y1='610.1' x2='239.9' y2='610.1'/>
-		</g>
-		<g class='node secondary business'>
-			<circle class='st2' cx='1312.2' cy='595' r='62.5'/>
-			<circle class='st0' cx='1312.2' cy='595' r='87.5'/>
-			<text transform='matrix(1 0 0 1 1261.6829 599.8358)'>Business</text>
-			<line class='st7' x1='1282.2' y1='610.1' x2='1342.2' y2='610.1'/>
-		</g>
-		<g class='title'>
-			<text transform='matrix(1 0 0 1 741.6306 1157.8423)'>
-				<tspan x='0' y='0' class='emph'>AI</tspan>
-				<tspan x='-68.8' y='28.8'>possible areas  </tspan>
-				<tspan x='-71' y='57.6'>of intervention</tspan>
-			</text>
-			<g class='connector'>
-				<circle cx='760.8' cy='662.7' r=0 data-r='5'/>
-				<line class='st1' x1='760.8' y1='662.7' x2='760.8' y2='662.7' data-y2='1112'/>
-			</g>
-		</g>
-	</svg>
+<header>
+	<img id='logo' src='imgs/branding/UNDP_accelerator_labs_logo_vertical_color_RGB.png'>
+</header>
 
-	<script type='text/javascript'>
-		// ANIMATE EVERYTHING IN
-		(function animateIn () {
-			d3.select('.orbit.primary')
-			.transition()
-			.duration(750)
-			.attr('r', function () { return d3.select(this).attr('data-r') })
-			.style('opacity', 1)
-			d3.select('.orbit.secondary')
-			.transition()
-			.duration(750)
-			.delay(150)
-			.attrs({
-				'rx': function () { return d3.select(this).attr('data-rx') },
-				'ry': function () { return d3.select(this).attr('data-ry') }
-			}).style('opacity', 1)
-			d3.select('g.title .connector circle')
-			.transition()
-			.duration(500)
-			.attr('r', function () { return d3.select(this).attr('data-r') })
-			d3.select('g.title .connector line')
-			.transition()
-			.duration(500)
-			.delay(250)
-			.attr('y2', function () { return d3.select(this).attr('data-y2') })
-			d3.select('g.title text')
-			.transition()
-			.duration(1000)
-			.delay(250)
-			.style('opacity', 1)
-		})()
+<div class='container'>
+	<div class='left-col'>
+		<svg version='1.1' id='map' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px'
+				 viewBox='0 0 1500 1325' preserveAspectRatio='xMidYMid meet'>
+			
+			<ellipse class='st0 orbit secondary' cx='750' cy='604' rx=0 ry=0 data-rx='550' data-ry='255'/>
+			
+			<g class='title'>
+				<text transform='matrix(1 0 0 1 741.6306 1157.8423)'>
+					<tspan x='0' y='0' class='emph'>AI</tspan>
+					<tspan x='-68.8' y='28.8'>(possible) areas</tspan>
+					<tspan x='-71' y='57.6'>of intervention</tspan>
+				</text>
+				<g class='connector'>
+					<circle cx='760.8' cy='662.7' r=0 data-r='5'/>
+					<line class='st1' x1='760.8' y1='662.7' x2='760.8' y2='662.7' data-y2='1112'/>
+				</g>
+			</g>
+		</svg>
+	</div>
+	<div class='right-col'>
+	</div>
+</div>
+<footer>
+	<div class='footer-row'>
+		<div class='footer-column left'>
+			<div class='outer'>
+				<img class='logo' src='imgs/branding/UNDP_accelerator_labs_logo_vertical_white.png' alt='UNDP accelerator labs logo'>
+				<small>UNDP Accelerator Labs</small>
+			</div>
+			<div class='inner'>
+				<h3>Links</h3>
+				<!-- TO DO: TRANSLATE -->
+				<ul>
+					<li>
+						<a target='_blank' href='https://www.undp.org/acceleratorlabs'>
+						About Us
+						</a>
+						<!-- TO DO: TRANSLATE -->
+					</li>
+					<li>
+						<a target='_blank' href='https://www.undp.org/accountability/audit/investigations'>
+						Report fraud, abuse, misconduct
+						<!-- TO DO: TRANSLATE -->
+						</a>
+					</li>
+					<li>
+						<a target='_blank' href='https://www.undp.org/scam-alert'>
+						Scam Alert
+						<!-- TO DO: TRANSLATE -->
+						</a>
+					</li>
+					<li>
+						<a target='_blank' href='https://www.undp.org/copyright-terms-use'>
+						Terms of Use
+						<!-- TO DO: TRANSLATE -->
+						</a>
+					</li>
+					<li>
+						<a target='_blank' href='https://forms.office.com/Pages/ResponsePage.aspx?id=Xtvls0QpN0iZ9XSIrOVDGbiZROH1lsFMla8_BsgmZ6lUOU1SNkVFWkRCVkFaTzBVWExSNkwyNkJGNi4u'>
+						Submit a request about our platforms
+						<!-- TO DO: TRANSLATE -->
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class='footer-column center'>
+			<div class='inner'>
+				<h3>Our Partners</h3>
+				<!-- TO DO: TRANSLATE -->
+				<img class='footer-img' src='imgs/branding/UNDP_Acc_Labs_All_Partners_horiz_white.png'	alt='UNDP accelerator Partnerslogo'>
+			</div>
+		</div>
+		<div class='footer-column right'>
+			<div class='inner'>
+				<!-- <h3>Follow Us</h3>
+				<div class='social-media-links'>
+					<ul>
+						<li>
+							<a target='_blank' href='https://www.linkedin.com/company/undp-accelerator-labs'>
+								<i class='fa fa-linkedin' > </i>
+							</a>
+						</li>
+						<li>
+							<a target='_blank' href='https://twitter.com/UNDPAccLabs'>
+								<i class='fa fa-twitter'> </i>
+							</a>
+						</li>
+						<li>
+							<a target='_blank' href='https://www.instagram.com/acceleratorlabs/'>
+								<i class='fa fa-instagram'> </i>
+							</a>
+						</li>
+					</ul>
+				</div> -->
+			</div>
+		</div>
+	</div>
+	<div class='footer-row signature'>
+		<div class='inner'>
+			<p>&copy; 2023 United Nations Development Programme</p>
+		</div>
+		<!-- TO DO: TRANSLATE -->
+	</div>
+</footer>
 
+<script type='text/javascript'>
 
-		d3.selectAll('.node')
-		.on('click', function () {
-			const sel = d3.select(this)
+	const svg = d3.select('svg')
+	const w = +svg.node().attributes.viewBox.value.split(' ')[2]
+	const h = +svg.node().attributes.viewBox.value.split(' ')[3]
+
+	function addPrimaryNodes (data) {
+		const orbit_width = 325
+		const orbit = svg.addElems('circle', 'orbit primary')
+		.attrs({
+			'r': 0,
+			'cx': w / 2,
+			'cy': h / 2
+		}).transition()
+		.duration(750)
+		.attr('r', orbit_width)
+		.style('opacity', 1)
+
+		const g = svg.addElems('g', 'node primary', data)
+		.each(function (d) { d3.select(this).classed(d.category.toLowerCase(), true) })
+		.attr('transform', (d, i) => `translate(${ polar2cartesian(orbit_width, (360 / data.length) * i, w / 2, h / 2) })`)
+
+		g.addElems('circle', 'outline')
+		.attr('r', 0)
+		g.selectAll('.node.primary circle.outline')
+		.transition()
+		.duration(500)
+		.delay((d, i) => 75 + i * 50)
+		.attr('r', 90)
+		
+		g.addElems('circle', 'bg')
+		.attr('r', 0)
+		.on('click', function () { 
+			const sel = d3.select(this).findAncestor('node')
 			sel.classed('expanded', !sel.classed('expanded'))
-			sel.selectAll('.leaves circle')
-				.transition()
-				.duration(500)
-				.delay((d, i) => i * 50)
-					.attr('r', function () { 
-						if (sel.classed('expanded')) return d3.select(this).attr('data-r') 
-						else return 0
-					})
-			sel.selectAll('.leaves .leaf text')
-				.transition()
-				.duration(500)
-				.delay((d, i) => 150 + i * 50)
-				.style('opacity', function () {
-					if (sel.classed('expanded')) return 1
-					else return 0
-				})
-			sel.selectAll('.leaves .leaf .underline')
-				.transition()
-				.duration(500)
-				.delay((d, i) => 300 + i * 150)
-				.attr('x2', function () {
-					if (sel.classed('expanded')) return d3.select(this).attr('data-x2')
-					else return d3.select(this).attr('x1')
-				})
+			sel.call(addChildNodes, sel.classed('expanded'))
 		})
-	</script>
+		g.selectAll('.node.primary circle.bg')
+		.transition()
+		.duration(500)
+		.delay((d, i) => 75 + i * 50)
+		.attr('r', 50)
+
+		g.addElems('text')
+		.attr('y', 5)
+		.text(d => d.category)
+		g.selectAll('.node.primary text')
+		.transition()
+		.duration(500)
+		.delay((d, i) => 150 + i * 50)
+		.style('opacity', 1)
+
+		g.addElems('line', 'underline')
+		.attrs({
+			'x1': -25,
+			'x2': -25,
+			'y1': 15,
+			'y2': 15
+		})
+		g.selectAll('.node.primary line.underline')
+		.transition()
+		.duration(500)
+		.delay((d, i) => 300 + i * 150)
+		.attr('x2', 25)
+
+		g.insertElems('text', 'rect', 'bg')
+		.each(function () {
+			const sel = d3.select(this)
+			const text = d3.select(this.parentNode).select('text')
+			const { x, width } = text.node().getBBox()
+			if (width > 90) sel.attrs({
+				'width': width + 40,
+				'height': 50,
+				'x': x - 20,
+				'y': -30
+			})
+			else sel.remove()
+		})
+	}
+
+	function addSecondaryNodes (data) {
+		const orbit = svg.select('ellipse.orbit.secondary')
+		const rx = +orbit.attr('data-rx')
+		const ry = +orbit.attr('data-ry')
+		const cx = +orbit.attr('cx')
+		const cy = +orbit.attr('cy')
+
+		const g = svg.addElems('g', 'node secondary', data)
+		.each(function (d) { d3.select(this).classed(d.category.toLowerCase(), true) })
+		.attr('transform', (d, i) => `translate(${ positionOnEllipse(rx, ry, (i * Math.PI / data.length) - Math.PI / 8, cx, cy) })`)
+
+		g.addElems('circle', 'outline')
+		.attr('r', 0)
+		g.selectAll('.node.secondary circle.outline')
+		.transition()
+		.duration(500)
+		.delay((d, i) => 75 + i * 50)
+		.attr('r', 90)
+		
+		g.addElems('circle', 'bg')
+		.attr('r', 0)
+		g.selectAll('.node.secondary circle.bg')
+		.transition()
+		.duration(500)
+		.delay((d, i) => 75 + i * 50)
+		.attr('r', 50)
+
+		g.addElems('text')
+		.attr('y', 5)
+		.text(d => d.category)
+		g.selectAll('.node.secondary text')
+		.transition()
+		.duration(500)
+		.delay((d, i) => 150 + i * 50)
+		.style('opacity', 1)
+
+		g.addElems('line', 'underline')
+		.attrs({
+			'x1': -25,
+			'x2': -25,
+			'y1': 15,
+			'y2': 15
+		})
+		g.selectAll('.node.secondary line.underline')
+		.transition()
+		.duration(500)
+		.delay((d, i) => 300 + i * 150)
+		.attr('x2', 25)
+
+		g.insertElems('text', 'rect', 'bg')
+		.each(function () {
+			const sel = d3.select(this)
+			const text = d3.select(this.parentNode).select('text')
+			const { x, width } = text.node().getBBox()
+			if (width > 90) sel.attrs({
+				'width': width + 40,
+				'height': 50,
+				'x': x - 20,
+				'y': -30
+			})
+			else sel.remove()
+		})
+	}
+
+	function addChildNodes (sel, expand = true) {
+		const orbit_width = 175
+		const g = sel.insertElems(':first-child', 'g', 'leaves')
+		const category = g.datum().category
+		const n = g.datum().types?.length ?? 0
+		
+		g.addElems('circle', 'orbit', d => d.types?.length > 0 ? [d] : [])
+		.attr('r', expand ? 0 : orbit_width)
+		.transition()
+		.duration(1000)
+		.attr('r', expand ? orbit_width : 0)
+		.style('opacity', expand ? 1 : 0)
+		.on('end', function () {
+			if (!expand) d3.select(this).remove()
+		})
+		
+		const leaves = g.addElems('g', 'leaf', d => d.types || [])
+		.attr('transform', (d, i) => `translate(${ polar2cartesian(orbit_width, (360 / n) * i + 60) })`)
+		
+		leaves.addElems('circle', 'outline')
+		.attr('r', expand ? 0 : 65)
+		g.selectAll('.leaf circle.outline')
+		.transition()
+		.duration(500)
+		.delay((d, i) => 75 + i * 50)
+		.attr('r', expand ? 65 : 0)
+		.on('end', function () {
+			if (!expand) d3.select(this).remove()
+		})
+
+		leaves.addElems('circle', 'bg')
+		.attr('r', 50)
+		.on('click', function (d) {
+			const { type } = d
+			const leaf = d3.select(this.parentNode)
+			d3.selectAll('g.active').filter(function () { return this !== leaf.node() }).classed('active', false)
+			leaf.classed('active', !leaf.classed('active'))
+			if (d3.select(this.parentNode).classed('active')) fetchdata({ category, type })
+			else clearPanel()
+		})
+		
+		leaves.addElems('text')
+		.attr('y', 5)
+		.text(d => d.type)
+		g.selectAll('.leaf text')
+		.transition()
+		.duration(500)
+		.delay((d, i) => 150 + i * 50)
+		.style('opacity', expand ? 1 : 0)
+		.on('end', function () {
+			if (!expand) d3.select(this).remove()
+		})
+
+		leaves.addElems('line', 'underline')
+		.attrs({
+			'x1': -25,
+			'x2': expand ? -25 : 25,
+			'y1': 15,
+			'y2': 15
+		})
+		g.selectAll('.leaf line.underline')
+		.transition()
+		.duration(500)
+		.delay((d, i) => 300 + i * 150)
+		.attr('x2', expand ? 25 : -25)
+		.on('end', function () {
+			if (!expand) d3.select(this).remove()
+		})
+
+		leaves.insertElems('text', 'rect', 'bg')
+		.each(function () {
+			const sel = d3.select(this)
+			if (expand) {
+				const text = d3.select(this.parentNode).select('text')
+				const { x, width } = text.node().getBBox()
+				if (width > 90) sel.attrs({
+					'width': width + 40,
+					'height': 50,
+					'x': x - 20,
+					'y': -30
+				})
+				else sel.remove()
+			} else sel.remove()
+		})
+
+		if (!expand) clearPanel
+	}
+
+	// LOAD STRUCTURE 
+	// https://script.google.com/macros/s/AKfycbxjMjmaf-jXpoSz-ncuLPw9MZp2f9ERk8RYDiajDldhcP4l7d6ONMX7j5yGumIq13Yv/exec
+	// const data = [{ category: 'tech', types: [{ type: 'data', count: 2 }, { type: 'models', count: 1 }, { type: 'production', count: 2 }, { type: 'repositories', count: 2 }] }, { category: 'policy', type: [] }, { category: 'application', type: [] }]
+	// console.log(data)
+	// addPrimaryNodes(data)
+
+	(function fetchStructure (category) {
+		addLoader()
+		
+		const api_endpoint = new URL('https://script.google.com/macros/s/AKfycbzX-I9BL2fyU0lSlQWmWAL3rwsqR8IfaWPrtIDFNAQGMU6iL3CMJoA1tsO6bp76nPcj/exec')
+		api_endpoint.searchParams.append('req', 'structure')
+
+		fetch(api_endpoint.href, { method: 'GET' })
+		.then(res => res.json())
+		.then(res => {
+			const { data } = res
+			rmLoader()
+			addPrimaryNodes(data[0])
+			addSecondaryNodes([{ category: 'Business' }, { category: 'Infrastructure' }])
+			animateIn()
+		}).catch(err => console.log(err))
+	})()
+	
+	// ANIMATE EVERYTHING IN
+	function animateIn () {
+		d3.select('.orbit.secondary')
+		.transition()
+		.duration(750)
+		.delay(150)
+		.attrs({
+			'rx': function () { return d3.select(this).attr('data-rx') },
+			'ry': function () { return d3.select(this).attr('data-ry') }
+		}).style('opacity', 1)
+		d3.select('g.title .connector circle')
+		.transition()
+		.duration(500)
+		.attr('r', function () { return d3.select(this).attr('data-r') })
+		d3.select('g.title .connector line')
+		.transition()
+		.duration(500)
+		.delay(250)
+		.attr('y2', function () { return d3.select(this).attr('data-y2') })
+		d3.select('g.title text')
+		.transition()
+		.duration(1000)
+		.delay(250)
+		.style('opacity', 1)
+	}
+
+	function fetchdata (kwargs) {
+		const { category, type } = kwargs
+		clearPanel()
+		addLoader()
+
+		const api_endpoint = new URL('https://script.google.com/macros/s/AKfycbzX-I9BL2fyU0lSlQWmWAL3rwsqR8IfaWPrtIDFNAQGMU6iL3CMJoA1tsO6bp76nPcj/exec')
+		api_endpoint.searchParams.append('req', 'data')
+		api_endpoint.searchParams.append('category', category.toLowerCase())
+		api_endpoint.searchParams.append('type', type.toLowerCase())
+
+		fetch(api_endpoint.href, { method: 'GET' })
+		.then(res => res.json())
+		.then(res => {
+			const { data } = res
+			const { values } = data[0]
+			rmLoader()
+			addContent({ category, type, values })
+		}).catch(err => console.log(err))
+	}
+
+	function addContent (kwargs) {
+		const { category, type, values } = kwargs
+		const container = d3.select('.right-col')
+		.style('flex', '1 1 0')
+		.addElems('div', 'inner')
+
+		console.log(values)
+
+		container.addElems('h1', 'main-title')
+		.html(category)
+		container.addElems('h2', 'sub-title')
+		.html(type)
+
+		const entries = container.addElems('div', 'entry', values)
+		entries.addElems('h3', 'entry-title')
+		.html(d => d.title)
+		entries.addElems('small', 'contributor')
+		.html(d => `Contributed by: <strong>${d.name}, ${d.country}</strong>`)
+		entries.addElems('p', 'description')
+		.html(d => `${d.description}`)
+		entries.addElems('div', 'ai-type tag')
+		.html(d => `${d['type of ai involved']}`)
+	}
+	function clearPanel () {
+		const container = d3.select('.right-col')
+		.style('flex', '0 1 0')
+		container.selectAll('.inner').remove()
+	}
+
+	function addLoader () {
+		const ripple = d3.select('body').addElems('div', 'lds-ripple')
+		ripple.addElems('div', 'filler', [1, 2])
+	}
+	function rmLoader () {
+		d3.select('.lds-ripple').remove()
+	}
+
+	function polar2cartesian (r = 0, angle = 0, offsetx = 0, offsety = 0) {
+		angle = (angle - 90) * Math.PI / 180 // THE -90 IS TO START AT THE TOP
+		const x = r * Math.cos(angle) + offsetx
+		const y = r * Math.sin(angle) + offsety
+		return [ x, y ]
+	}
+	function positionOnEllipse (rx = 0, ry = 0, angle = 0, offsetx = 0, offsety = 0) {
+		// POSITION ON ELLIPSE SOURCE: https://stackoverflow.com/questions/51660456/how-to-get-the-edge-coordinate-of-an-ellipse-in-javascript-at-a-specific-degree
+		// angle = (angle - 90) * Math.PI / 180 // THE -90 IS TO START AT THE TOP
+		const t = Math.tan(angle + Math.atan(2 * ry / rx) / 2)
+		const px = rx * (1 - t ** 2) / (1 + t ** 2)
+		const py = ry * 2 * t / (1 + t ** 2)
+		return [ px + offsetx, py + offsety ]
+	}
+</script>
 </body>
 </html>
