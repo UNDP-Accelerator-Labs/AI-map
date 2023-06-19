@@ -61,7 +61,7 @@ img#logo {
 	color: #FFF;
 }
 .right-col .inner {
-	padding: 2em 4em;
+	padding: 0 4em 2em 4em;
 }
 h1.main-title {
 	margin-bottom: 0;
@@ -73,8 +73,17 @@ h2.sub-title {
 h3.entry-title {
 	margin-bottom: 0;
 }
-small.contributor {
+h3 small {
+	font-size: 14px;
+	font-weight: normal;
+	text-decoration: underline;
+}
+small.contributor,
+small.location {
 	display: block;
+}
+small.location {
+	margin-bottom: 1em;
 }
 div.entry {
 	padding: 2rem 0;
@@ -86,6 +95,14 @@ div.tag {
 	padding: 2px 5px;
 	border: 1px solid #FFF;
 	border-radius: 5px;
+	margin: 5px 5px 5px 0;
+}
+a {
+	display: block;
+	margin-bottom: 1em;
+	color: #B4DC28;
+	font-size: 12px;
+	outline: none;
 }
 
 svg {

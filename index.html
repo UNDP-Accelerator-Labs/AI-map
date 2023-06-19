@@ -379,15 +379,21 @@
 	(function fetchStructure (category) {
 		addLoader()
 
-		const api_endpoint = new URL('https://script.google.com/macros/s/AKfycbzX-I9BL2fyU0lSlQWmWAL3rwsqR8IfaWPrtIDFNAQGMU6iL3CMJoA1tsO6bp76nPcj/exec')
+		// const api_endpoint = new URL('https://script.google.com/macros/s/AKfycbzX-I9BL2fyU0lSlQWmWAL3rwsqR8IfaWPrtIDFNAQGMU6iL3CMJoA1tsO6bp76nPcj/exec')
+
+		const api_endpoint = new URL('https://script.google.com/macros/s/AKfycbzhV4xWTan7xRHNGBTWfESVCjurz69xQEsQnv1m6vNSqe1WL69ManUMjLNOq7l7uqXs0g/exec')
 		api_endpoint.searchParams.append('req', 'structure')
 
 		fetch(api_endpoint.href, { method: 'GET' })
 		.then(res => res.json())
 		.then(res => {
-			const { data } = res
+			let { data } = res
+				
+			const sorter = ['policy', 'application', 'tech']
+			data = data[0].sort((a, b) => sorter.indexOf(a.category.toLowerCase()) - sorter.indexOf(b.category.toLowerCase()))
+
 			rmLoader()
-			addPrimaryNodes(data[0])
+			addPrimaryNodes(data)
 			addSecondaryNodes([{ category: 'Business' }, { category: 'Infrastructure' }])
 			animateIn()
 		}).catch(err => console.log(err))
@@ -424,7 +430,8 @@
 		clearPanel()
 		addLoader()
 
-		const api_endpoint = new URL('https://script.google.com/macros/s/AKfycbzX-I9BL2fyU0lSlQWmWAL3rwsqR8IfaWPrtIDFNAQGMU6iL3CMJoA1tsO6bp76nPcj/exec')
+		// const api_endpoint = new URL('https://script.google.com/macros/s/AKfycbzX-I9BL2fyU0lSlQWmWAL3rwsqR8IfaWPrtIDFNAQGMU6iL3CMJoA1tsO6bp76nPcj/exec')
+		const api_endpoint = new URL('https://script.google.com/macros/s/AKfycbzhV4xWTan7xRHNGBTWfESVCjurz69xQEsQnv1m6vNSqe1WL69ManUMjLNOq7l7uqXs0g/exec')
 		api_endpoint.searchParams.append('req', 'data')
 		api_endpoint.searchParams.append('category', category.toLowerCase())
 		api_endpoint.searchParams.append('type', type.toLowerCase())
@@ -455,14 +462,21 @@
 		.html(type)
 
 		const entries = container.addElems('div', 'entry', values)
+		
 		entries.addElems('h3', 'entry-title')
-		.html(d => d.title)
+		.html(d => `<small>[${d['contribution type']}]</small> ${d.title}`)
 		entries.addElems('small', 'contributor')
 		.html(d => `Contributed by: <strong>${d.name}, ${d.country}</strong>`)
 		entries.addElems('p', 'description')
 		.html(d => `${d.description}`)
-		entries.addElems('div', 'ai-type tag')
-		.html(d => `${d['type of ai involved']}`)
+		entries.addElems('a', 'link', d => d['link'] ? [d] : [])
+		.attr('href', d => d['link'])
+		.html(d => d['link'])
+		entries.addElems('small', 'location')
+		.html(d => `This insight applies to: <strong>${d['country this insight applies to']}</strong>`)
+		entries.addElems('div', 'ai-format tag', d => d['format'].split(','))
+		// .html(d => `${d['type of ai involved']}`)
+		.html(d => `${d.trim()}`)
 	}
 	function clearPanel () {
 		const container = d3.select('.right-col')
