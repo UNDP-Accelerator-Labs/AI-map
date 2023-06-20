@@ -30,6 +30,11 @@
 </header>
 
 <div class='container'>
+	<!-- <div class='btn-row'>
+		<button type='button' data-type='work' class='active'>Ongoing or past work</button>
+		<button type='button' data-type='opportunity' class='active'>Opportunities</button>
+		<button type='button' data-type='signal' class='active'>Signals</button>
+	</div> -->
 	<div class='left-col'>
 		<svg version='1.1' id='map' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px'
 				 viewBox='0 0 1500 1325' preserveAspectRatio='xMidYMid meet'>
@@ -144,6 +149,10 @@
 
 	function addPrimaryNodes (data) {
 		const orbit_width = 325
+		const nodescale = d3.scaleLinear()
+		.range([60, 120])
+		.domain(d3.extent(data.map(d => d3.sum(d.types, c => c.count)).flat()))
+
 		const orbit = svg.addElems('circle', 'orbit primary')
 		.attrs({
 			'r': 0,
@@ -164,14 +173,14 @@
 		.transition()
 		.duration(500)
 		.delay((d, i) => 75 + i * 50)
-		.attr('r', 90)
+		.attr('r', d => nodescale(d3.sum(d.types, c => c.count)))
 		
 		g.addElems('circle', 'bg')
 		.attr('r', 0)
 		.on('click', function () { 
 			const sel = d3.select(this).findAncestor('node')
 			sel.classed('expanded', !sel.classed('expanded'))
-			sel.call(addChildNodes, sel.classed('expanded'))
+			sel.call(addChildNodes, { expand: sel.classed('expanded'), nodescale })
 		})
 		g.selectAll('.node.primary circle.bg')
 		.transition()
@@ -280,13 +289,12 @@
 		})
 	}
 
-	function addChildNodes (sel, expand = true) {
-		const orbit_width = 175
+	function addChildNodes (sel, kwargs) {
+		const { expand, nodescale } = kwargs
 		const g = sel.insertElems(':first-child', 'g', 'leaves')
 		const category = g.datum().category
 		const n = g.datum().types?.length ?? 0
-
-		console.log(g.datum())
+		const orbit_width = nodescale(d3.sum(g.datum().types, d => d.count)) + nodescale(d3.max(g.datum().types, d => d.count)) + 15
 		
 		g.addElems('circle', 'orbit', d => d.types?.length > 0 ? [d] : [])
 		.attr('r', expand ? 0 : orbit_width)
@@ -302,18 +310,18 @@
 		.attr('transform', (d, i) => `translate(${ polar2cartesian(orbit_width, (360 / n) * i + 60) })`)
 		
 		leaves.addElems('circle', 'outline')
-		.attr('r', expand ? 0 : 65)
+		.attr('r', d => expand ? 0 : nodescale(d.count))
 		g.selectAll('.leaf circle.outline')
 		.transition()
 		.duration(500)
 		.delay((d, i) => 75 + i * 50)
-		.attr('r', expand ? 65 : 0)
+		.attr('r', d => expand ? nodescale(d.count) : 0)
 		.on('end', function () {
 			if (!expand) d3.select(this).remove()
 		})
 
 		leaves.addElems('circle', 'bg')
-		.attr('r', 50)
+		.attr('r', expand ? 0 : 50)
 		.on('click', function (d) {
 			const { type } = d
 			const leaf = d3.select(this.parentNode)
@@ -321,6 +329,14 @@
 			leaf.classed('active', !leaf.classed('active'))
 			if (d3.select(this.parentNode).classed('active')) fetchdata({ category, type })
 			else clearPanel()
+		})
+		g.selectAll('.leaf circle.bg')
+		.transition()
+		.duration(500)
+		.delay((d, i) => 150 + i * 50)
+		.attr('r', expand ? 50 : 0)
+		.on('end', function () {
+			if (!expand) d3.select(this).remove()
 		})
 		
 		leaves.addElems('text')
@@ -352,19 +368,37 @@
 		})
 
 		leaves.insertElems('text', 'rect', 'bg')
-		.each(function () {
+		.each(function (d) {
 			const sel = d3.select(this)
-			if (expand) {
-				const text = d3.select(this.parentNode).select('text')
-				const { x, width } = text.node().getBBox()
-				if (width > 90) sel.attrs({
-					'width': width + 40,
-					'height': 50,
-					'x': x - 20,
-					'y': -30
-				})
-				else sel.remove()
-			} else sel.remove()
+
+			const text = d3.select(this.parentNode).select('text')
+			const { x, width } = text.node().getBBox()
+			d.x = x
+			d.width = width
+			// if (expand) {
+			// 	const text = d3.select(this.parentNode).select('text')
+			// 	const { x, width } = text.node().getBBox()
+			// 	if (width > 90) sel.attrs({
+			// 		'width': expand ? 0 : width + 40,
+			// 		'height': 50,
+			// 		'x': x - 20,
+			// 		'y': -30
+			// 	})
+			// 	else sel.remove()
+			// } else sel.remove()
+		}).attrs({
+			'width': d => expand ? 0 : d.width + 40,
+			'height': 50,
+			'x': d => d.x - 20,
+			'y': -30
+		})
+		g.selectAll('.leaf rect.bg')
+		.transition()
+		.duration(500)
+		.delay((d, i) => 300 + i * 150)
+		.attr('width', d => expand ? d.width + 40 : 0)
+		.on('end', function () {
+			if (!expand) d3.select(this).remove()
 		})
 
 		if (!expand) clearPanel
@@ -454,8 +488,6 @@
 		.style('flex', '1 1 0')
 		.addElems('div', 'inner')
 
-		console.log(values)
-
 		container.addElems('h1', 'main-title')
 		.html(category)
 		container.addElems('h2', 'sub-title')
@@ -473,7 +505,7 @@
 		.attr('href', d => d['link'])
 		.html(d => d['link'])
 		entries.addElems('small', 'location')
-		.html(d => `This insight applies to: <strong>${d['country this insight applies to']}</strong>`)
+		.html(d => `This ${d['contribution type'].toLowerCase()} applies to: <strong>${d['country this insight applies to']}</strong>`)
 		entries.addElems('div', 'ai-format tag', d => d['format'].split(','))
 		// .html(d => `${d['type of ai involved']}`)
 		.html(d => `${d.trim()}`)

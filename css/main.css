@@ -51,6 +51,26 @@ img#logo {
 	width: 100%;
 	height: calc(100% - 30px);
 }
+.btn-row {
+	display: block;
+	position: absolute;
+	top: 30;
+	width: 100%;
+	text-align: center;
+}
+.btn-row button {
+	background: transparent;
+	border: none;
+	color: #FA7814;
+	outline: none;
+	padding: 5px 10px;
+	cursor: pointer;
+	font-size: 14px;
+}
+.btn-row button.active {
+	background: #FA7814;
+	color: #FFF;
+}
 .left-col {
 	flex: 1 1 0;
 }
@@ -59,6 +79,7 @@ img#logo {
 	background-color: #005687;
 	transition: flex .5s;
 	color: #FFF;
+	overflow: auto;
 }
 .right-col .inner {
 	padding: 0 4em 2em 4em;
