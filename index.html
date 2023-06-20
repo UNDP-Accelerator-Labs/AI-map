@@ -151,7 +151,7 @@
 		const orbit_width = 325
 		const nodescale = d3.scaleLinear()
 		.range([60, 120])
-		.domain(d3.extent(data.map(d => d3.sum(d.types, c => c.count)).flat()))
+		.domain([0, d3.max(data.map(d => d3.sum(d.types, c => c.count)).flat())])
 
 		const orbit = svg.addElems('circle', 'orbit primary')
 		.attrs({
