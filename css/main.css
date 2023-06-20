@@ -39,6 +39,11 @@ header {
 	height: 30px;
 	background-color: #005687;
 }
+header a {
+	line-height: 26px;
+	margin: 0 30px;
+	float: right;
+}
 img#logo {
 	height: 125px;
 	position: absolute;
