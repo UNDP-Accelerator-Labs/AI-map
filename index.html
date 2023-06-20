@@ -375,17 +375,6 @@
 			const { x, width } = text.node().getBBox()
 			d.x = x
 			d.width = width
-			// if (expand) {
-			// 	const text = d3.select(this.parentNode).select('text')
-			// 	const { x, width } = text.node().getBBox()
-			// 	if (width > 90) sel.attrs({
-			// 		'width': expand ? 0 : width + 40,
-			// 		'height': 50,
-			// 		'x': x - 20,
-			// 		'y': -30
-			// 	})
-			// 	else sel.remove()
-			// } else sel.remove()
 		}).attrs({
 			'width': d => expand ? 0 : d.width + 40,
 			'height': 50,
@@ -401,7 +390,7 @@
 			if (!expand) d3.select(this).remove()
 		})
 
-		if (!expand) clearPanel
+		if (!expand) clearPanel()
 	}
 
 	// LOAD STRUCTURE 
