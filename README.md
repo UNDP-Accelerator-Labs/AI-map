@@ -1,0 +1,3 @@
+The UNDP Accelerator Labs regularly submit Learning Action Plans (LAPs) via a digital platform. This platform comes with a functionality for tagging the LAPs. In the interest of spotting emergent patterns, tagging happens via a [folksonomy](https://en.wikipedia.org/wiki/Folksonomy), rather than by a pre-defined ontology.
+
+Each dot in the visualization represents a tag used to categorize an article. The dots are clustered by semantics, so conceptually similar topics should appear in the same cluster. You can click on a cluster to bring up articles with those tags. the articles will show on the right side. Then, when hovering the articles on the side it will show the co-occurrences of the tags of this article. this allows you to see how tags co-occur with each another.
