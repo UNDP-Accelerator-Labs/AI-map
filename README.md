@@ -1,10 +1,10 @@
 # Mainstreaming data innovation through the UNDP Accelerator Labs Network
 
-Taking stock of the mainstreaming of data innovation through the UNDP Accelerator Labs network.
-This is purposefully reductive to show the data-related "projects". These are all part of broader portfolios of interventions.
-Note we do not cover initiatives like crowdmapping here, as these are covered by the collective intelligence work of the labs.
-The next frontier is data collaboratives to ensure sustainability of these efforts.
-Ultimately, data and computational techniques are a means to an end. 
+Over the past four years, the Accelerator Labs Network has been pushing for the mainstreaming of data innovation in development practice. Here we take stock of these efforts and highlight a certain convergence between computaional techniques, datasources, and application areas.
+This list is intentionally reductive. It focuses on data innovation "projects". It should be noted however, that these are all part of broader portfolios of interventions.
+Overall, we see data innovation a means to an end, not as an objective in itself. 
+
+The next frontier for much of these projects is to establish data collaboratives to ensure their sustainability. More to come on this soon…
 
 <table>
 	<thead>
@@ -140,3 +140,5 @@ Ultimately, data and computational techniques are a means to an end.
 		</tr>
 	</tbody>
 </table>
+
+*Note we do not cover initiatives like crowdmapping here, as these are covered by the collective intelligence work of the labs.*
