@@ -98,5 +98,30 @@ The next frontier is data collaboratives to ensure sustainability of these effor
 			<td></td>
 			<td>Jordan</td>
 		</tr>
+		<tr>
+			<td>Pre-trained text model</td>
+			<td>Operations support</td>
+			<td>R script generation for simple, baseline data analyses and visualizations</td>
+			<td>Guatemala</td>
+		</tr>
+		<tr>
+			<td rowspan=4>Generative AI</td>
+			<td>Pre-trained text model + political speeches</td>
+			<td>Democratic governance</td>
+			<td>Unified political speech generation</td>
+			<td>Argentina</td>
+		</tr>
+		<tr>
+			<td>Pre-trained image model</td>
+			<td>Gender</td>
+			<td>Analysis of gender stereotypes in STEM fields</td>
+			<td>Serbia</td>
+		</tr>
+		<tr>
+			<td>Pre-trained image model + urban and vegetation photos</td>
+			<td>Urban development</td>
+			<td>Green urbanism image generation during public consultations</td>
+			<td>North Macedonia</td>
+		</tr>
 	</tbody>
 </table>
