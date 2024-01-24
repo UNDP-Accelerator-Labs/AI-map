@@ -151,3 +151,7 @@ The next frontier for much of these projects is to establish data collaboratives
 </table>
 
 *Note we do not cover initiatives like crowdmapping here, as these are covered by the collective intelligence work of the labs.*
+
+## Descriptive analyses
+
+![Datasource distribution](/imgs/stats/datasources.png)
