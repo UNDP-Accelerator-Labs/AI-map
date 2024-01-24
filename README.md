@@ -27,7 +27,7 @@ The next frontier is data collaboratives to ensure sustainability of these effor
 		</tr>
 		<tr>
 			<td rowspan=7>Satellite imagery</td>
-			<td rowspan=4>Pollution and waste management</td>
+			<td rowspan=3>Pollution and waste management</td>
 			<td rowspan=3>Dump site detection</td>
 			<td>Guatemala</td>
 		</tr>
