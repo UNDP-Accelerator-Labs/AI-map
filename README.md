@@ -16,7 +16,7 @@ The next frontier is data collaboratives to ensure sustainability of these effor
 	</thead>
 	<tbody>
 		<tr>
-			<td rowspan=9>Feature detection</td>
+			<td rowspan=6>Feature detection</td>
 			<td rowspan=2>Drone imagery</td>
 			<td rowspan=2>Agriculture and pastoralism</td>
 			<td rowspan=2>Crop disease detection</td>
@@ -26,7 +26,7 @@ The next frontier is data collaboratives to ensure sustainability of these effor
 			<td>Cabo Verde</td>
 		</tr>
 		<tr>
-			<td rowspan=7>Satellite imagery</td>
+			<td rowspan=4>Satellite imagery</td>
 			<td rowspan=3>Pollution and waste management</td>
 			<td rowspan=3>Dump site detection</td>
 			<td>Guatemala</td>
