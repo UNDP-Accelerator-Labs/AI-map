@@ -1,6 +1,8 @@
 # Mainstreaming data innovation through the UNDP Accelerator Labs Network
 
 Over the past four years, the Accelerator Labs Network has been pushing for the mainstreaming of data innovation in development practice. Here we take stock of these efforts and highlight a certain convergence between computaional techniques, datasources, and application areas.
+Note the work of the labs is action oriented. Other application areas and convergences likely exist in academic work. The focus here is on the application of these techniques x datasources in development contexts around the world.
+
 This list is intentionally reductive. It focuses on data innovation "projects". It should be noted however, that these are all part of broader portfolios of interventions.
 Overall, we see data innovation a means to an end, not as an objective in itself. 
 
