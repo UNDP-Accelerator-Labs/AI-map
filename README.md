@@ -18,7 +18,7 @@ Ultimately, data and computational techniques are a means to an end.
 	</thead>
 	<tbody>
 		<tr>
-			<td rowspan=7>Feature detection</td>
+			<td rowspan=8>Feature detection</td>
 			<td rowspan=2>Drone imagery</td>
 			<td rowspan=2>Agriculture and pastoralism</td>
 			<td rowspan=2>Crop disease detection</td>
@@ -28,8 +28,8 @@ Ultimately, data and computational techniques are a means to an end.
 			<td>Cabo Verde</td>
 		</tr>
 		<tr>
-			<td rowspan=5>Satellite imagery</td>
-			<td rowspan=4>Pollution and waste management</td>
+			<td rowspan=6>Satellite imagery</td>
+			<td rowspan=5>Pollution and waste management</td>
 			<td rowspan=3>Dump site detection</td>
 			<td>Guatemala</td>
 		</tr>
@@ -42,6 +42,10 @@ Ultimately, data and computational techniques are a means to an end.
 		<tr>
 			<td>Plastic waste detection in river systems</td>
 			<td>The Philippines</td>
+		</tr>
+		<tr>
+			<td>Brick kiln detection</td>
+			<td>India</td>
 		</tr>
 		<tr>
 			<td>Environmental monitoring</td>
