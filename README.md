@@ -154,4 +154,11 @@ The next frontier for much of these projects is to establish data collaboratives
 
 ## Descriptive analyses
 
+![Computational technique distribution](/imgs/stats/technique.png)
+*Distribution of computational techniques*
+
 ![Datasource distribution](/imgs/stats/datasources.png)
+*Distribution of datasource distribution*
+
+![Area distribution](/imgs/stats/area.png)
+*Distribution of topic areas*
