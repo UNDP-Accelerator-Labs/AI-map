@@ -97,7 +97,7 @@ The next frontier for much of these projects is to establish data collaboratives
 			<td>Tanzania</td>
 		</tr>
 		<tr>
-			<td rowspan=3></td>
+			<td rowspan=3>Social media posts</td>
 			<td rowspan=2>Gender</td>
 			<td rowspan=2>Gender-related toxic speech detection</td>
 			<td>Kyrgyzstan</td>
