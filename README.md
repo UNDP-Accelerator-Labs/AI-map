@@ -140,6 +140,13 @@ The next frontier for much of these projects is to establish data collaboratives
 			<td>Green urbanism image generation during public consultations</td>
 			<td>North Macedonia</td>
 		</tr>
+		<tr>
+			<td>Causal analysis</td>
+			<td>LinkedIn profiles</td>
+			<td>Gender</td>
+			<td>Gender inequality in the workplace</td>
+			<td>Serbia</td>
+		</tr>
 	</tbody>
 </table>
 
