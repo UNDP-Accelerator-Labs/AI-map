@@ -1,6 +1,6 @@
 # Mainstreaming data innovation through the UNDP Accelerator Labs Network
 
-Taking stock of the mainstreaming of data innovation throug the UNDP Accelerator Labs network.
+Taking stock of the mainstreaming of data innovation through the UNDP Accelerator Labs network.
 This is purposefully reductive to show the data-related "projects". These are all part of broader portfolios of interventions.
 The next frontier is data collaboratives to ensure sustainability of these efforts.
 
@@ -24,6 +24,18 @@ The next frontier is data collaboratives to ensure sustainability of these effor
 		</tr>
 		<tr>
 			<td>Cabo Verde</td>
+		</tr>
+		<tr>
+			<td rowspan=7>Satellite imagery</td>
+			<td rowspan=6>Pollution and waste management</td>
+			<td rowspan=3>Dump site detection</td>
+			<td>Guatemala</td>
+		</tr>
+		<tr>
+			<td>Serbia</td>
+		</tr>
+		<tr>
+			<td>Vietnam</td>
 		</tr>
 	</tbody>
 </table>
