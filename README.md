@@ -37,5 +37,10 @@ The next frontier is data collaboratives to ensure sustainability of these effor
 		<tr>
 			<td>Vietnam</td>
 		</tr>
+		<tr>
+			<td>Environmental monitoring</td>
+			<td>Mine detection</td>
+			<td>Bolivia</td>
+		</tr>
 	</tbody>
 </table>
