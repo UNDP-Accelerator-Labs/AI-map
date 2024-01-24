@@ -8,9 +8,10 @@ The next frontier is data collaboratives to ensure sustainability of these effor
 	<thead>
 		<tr>
 			<th>Computational technique</th>
-			<th>Data source(s)</th>
-			<th>Application area(s)</th>
-			<th>Instances</th>
+			<th>Data source</th>
+			<th>Area</th>
+			<th>Application</th>
+			<th>Lab</th>
 		</tr>
 	</thead>
 	<tbody>
