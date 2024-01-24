@@ -99,13 +99,13 @@ The next frontier is data collaboratives to ensure sustainability of these effor
 			<td>Jordan</td>
 		</tr>
 		<tr>
+			<td rowspan=4>Generative AI</td>
 			<td>Pre-trained text model</td>
 			<td>Operations support</td>
 			<td>R script generation for simple, baseline data analyses and visualizations</td>
 			<td>Guatemala</td>
 		</tr>
 		<tr>
-			<td rowspan=4>Generative AI</td>
 			<td>Pre-trained text model + political speeches</td>
 			<td>Democratic governance</td>
 			<td>Unified political speech generation</td>
