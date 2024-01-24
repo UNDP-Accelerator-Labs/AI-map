@@ -83,7 +83,7 @@ The next frontier for much of these projects is to establish data collaboratives
 			<td>Kyrgyzstan</td>
 		</tr>
 		<tr>
-			<td rowspan=6>Text analysis</td>
+			<td rowspan=6>Topic analysis and classification</td>
 			<td rowspan=3>Online reviews</td>
 			<td rowspan=3>Tourism</td>
 			<td>Topic analysis of toursit reviews</td>
