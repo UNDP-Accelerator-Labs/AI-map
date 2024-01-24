@@ -21,6 +21,8 @@ The next frontier is data collaboratives to ensure sustainability of these effor
 			<td rowspan=2>Agriculture and pastoralism</td>
 			<td rowspan=2>Crop disease detection</td>
 			<td>Cameroon</td>
+		</tr>
+		<tr>
 			<td>Cabo Verde</td>
 		</tr>
 	</tbody>
