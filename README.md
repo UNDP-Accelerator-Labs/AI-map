@@ -42,5 +42,33 @@ The next frontier is data collaboratives to ensure sustainability of these effor
 			<td>Mine detection</td>
 			<td>Bolivia</td>
 		</tr>
+		<tr>
+			<td rowspan=6>Land cover and use classification</td>
+			<td rowspan=6>Satellite imagery</td>
+			<td rowspan=4>Agriculture and pastoralism</td>
+			<td>Detection of sustained grazing areas over time</td>
+			<td>Somalia</td>
+		</tr>
+		<tr>
+			<td>Detection of sustained dry croplands over time</td>
+			<td>Niger</td>
+		</tr>
+		<tr>
+			<td>Detection of forest boundaries over time</td>
+			<td>Ecuador</td>
+		</tr>
+		<tr>
+			<td>Multilayer map generation</td>
+			<td>India</td>
+		</tr>
+		<tr>
+			<td rowspan=2>Disaster risk management</td>
+			<td>Flood detection</td>
+			<td>Mauritania</td>
+		</tr>
+		<tr>
+			<td>Landslide detection</td>
+			<td>Kyrgyzstan</td>
+		</tr>
 	</tbody>
 </table>
