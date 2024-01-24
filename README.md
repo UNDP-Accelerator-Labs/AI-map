@@ -2,7 +2,9 @@
 
 Taking stock of the mainstreaming of data innovation through the UNDP Accelerator Labs network.
 This is purposefully reductive to show the data-related "projects". These are all part of broader portfolios of interventions.
+Note we do not cover initiatives like crowdmapping here, as these are covered by the collective intelligence work of the labs.
 The next frontier is data collaboratives to ensure sustainability of these efforts.
+Ultimately, data and computational techniques are a means to an end. 
 
 <table>
 	<thead>
@@ -99,11 +101,16 @@ The next frontier is data collaboratives to ensure sustainability of these effor
 			<td>Jordan</td>
 		</tr>
 		<tr>
-			<td rowspan=4>Generative AI</td>
-			<td>Pre-trained text model</td>
+			<td rowspan=5>Generative AI</td>
+			<td rowspan=2>Pre-trained text model</td>
 			<td>Operations support</td>
 			<td>R script generation for simple, baseline data analyses and visualizations</td>
 			<td>Guatemala</td>
+		</tr>
+		<tr>
+			<td>Education</td>
+			<td>Personalized ducational material generation</td>
+			<td>Cameroon</td>
 		</tr>
 		<tr>
 			<td>Pre-trained text model + political speeches</td>
