@@ -6,7 +6,7 @@ Over the past four years, the UNDP Accelerator Labs Network has been pushing for
 
 The focus is intentionally reductive. It is on data innovation "projects". It should be noted however, that these are all part of broader portfolios of interventions. Overall, the UNDP Accelerator Labs Network sees data innovation a means to an end, not as an objective in itself. 
 
-The next frontier for much of these projects is to establish data collaboratives to ensure their sustainability. More to come on this soon…
+The next frontier for many of these projects is to establish data collaboratives to ensure their sustainability. More to come on this soon…
 
 <table>
 	<thead>
