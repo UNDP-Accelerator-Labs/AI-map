@@ -1,7 +1,8 @@
 # Mainstreaming data innovation through the UNDP Accelerator Labs Network
 
-Over the past four years, the Accelerator Labs Network has been pushing for the mainstreaming of data innovation in development practice. Here we take stock of these efforts and highlight a certain convergence between computaional techniques, datasources, and application areas.
-Note the work of the labs is action oriented. Other application areas and convergences likely exist in academic work. The focus here is on the application of these techniques x datasources in development contexts around the world.
+- [Download the data](https://github.com/UNDP-Accelerator-Labs/AI-map/blob/main/data/acclab_data_innovation.csv)
+
+Over the past four years, the Accelerator Labs Network has been pushing for the mainstreaming of data innovation in sustainable development practice. Here we take stock of these efforts and highlight a certain convergence between computaional techniques, datasources, and application areas. Note the work of the labs is action oriented. Other application areas and convergences undoubttably exist in academic work. The focus here is on the application readiness of these techniques x datasources in development contexts around the world.
 
 This list is intentionally reductive. It focuses on data innovation "projects". It should be noted however, that these are all part of broader portfolios of interventions.
 Overall, we see data innovation a means to an end, not as an objective in itself. 
@@ -150,12 +151,16 @@ The next frontier for much of these projects is to establish data collaboratives
 	</tbody>
 </table>
 
-*Note we do not cover initiatives like crowdmapping here, as these are covered by the collective intelligence work of the labs.*
+Note we do not cover initiatives like crowdmapping here, as these are covered by the collective intelligence work of the labs.
 
-## Descriptive analyses
+## Descriptive analysis
 
 ![Areas x datasources x labs](/imgs/stats/data_and_applications_colors.png)
 *Main data sources and application areas per lab*
+
+The main takeaway is that remote sensing data, whether low quality satellite imagery of high resolution drone imagery, is the most commonly used data source in the Accelerator Labs Network. This is likely due in part to the reelative simplicity in accessing imagery and the maturity of the computational techniques. 
+
+In terms of application areas,
 
 <!-- ![Computational technique distribution](/imgs/stats/technique.png)
 *Distribution of computational techniques*
