@@ -162,7 +162,7 @@ Remote sensing data, whether low quality satellite imagery of high resolution dr
 
 We also see a trend in applicaion areas for this type of data. Agriculture and pastoralism, and pollution and waste management are most common across labs, often trying to detect features in the imagery, like the aggregation of solid waste or crop diseases, or for deriving labd cover and land use maps, and vegetation indices.
 
-We also see a trend across several labs of the use of online posts, typically to travel sites, to understand sub-national toursim dynamics.
+We also see a trend across several labs on the use of online posts, typically to travel sites, to understand sub-national toursim dynamics.
 
 <!-- ![Computational technique distribution](/imgs/stats/technique.png)
 *Distribution of computational techniques*
