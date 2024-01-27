@@ -71,7 +71,7 @@ The next frontier for many of these projects is to establish data collaboratives
 		</tr>
 		<tr>
 			<td>Multilayer map generation</td>
-			<td>India</td>
+			<td>[India](https://github.com/undpindia/dicra)</td>
 		</tr>
 		<tr>
 			<td rowspan=2>Disaster risk management</td>

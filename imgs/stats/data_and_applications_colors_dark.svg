@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- Generator: Adobe Illustrator 27.9.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 837.2 686.4" style="enable-background:new 0 0 837.2 686.4;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill:#0C0C0C;}
@@ -8,98 +8,140 @@
 	.st2{font-family:'NotoSans-Regular';}
 	.st3{font-size:12px;}
 	.st4{font-family:'NotoSans-Bold';}
-	.st5{fill:none;stroke:#61B233;stroke-width:10;stroke-linecap:round;stroke-opacity:0.5;}
-	.st6{fill:none;stroke:#61B233;stroke-linecap:round;stroke-opacity:0.5;}
-	.st7{fill:none;stroke:#61B233;stroke-width:2.8;stroke-linecap:round;stroke-opacity:0.5;}
-	.st8{fill:none;stroke:#61B233;stroke-width:8.2;stroke-linecap:round;stroke-opacity:0.5;}
-	.st9{fill:none;stroke:#FA7814;stroke-linecap:round;stroke-opacity:0.5;}
-	.st10{fill:none;stroke:#F03C8C;stroke-linecap:round;stroke-opacity:0.5;}
-	.st11{fill:none;stroke:#FA7814;stroke-width:2.8;stroke-linecap:round;stroke-opacity:0.5;}
-	.st12{fill:none;stroke:#FA7814;stroke-width:4.6;stroke-linecap:round;stroke-opacity:0.5;}
-	.st13{fill:none;stroke:#32BEE1;stroke-linecap:round;stroke-opacity:0.5;}
+	.st5{fill:none;stroke:#FFFFFF;stroke-width:20;stroke-linecap:round;stroke-opacity:0.5;}
+	.st6{fill:none;stroke:#FFFFFF;stroke-width:2;stroke-linecap:round;stroke-opacity:0.5;}
+	.st7{fill:none;stroke:#FFFFFF;stroke-width:5.6;stroke-linecap:round;stroke-opacity:0.5;}
+	.st8{fill:none;stroke:#FFFFFF;stroke-width:16.4;stroke-linecap:round;stroke-opacity:0.5;}
+	.st9{fill:none;stroke:#FFFFFF;stroke-width:9.2;stroke-linecap:round;stroke-opacity:0.5;}
+	.st10{fill:none;stroke:#61B233;stroke-width:20;stroke-linecap:round;stroke-opacity:0.5;}
+	.st11{fill:none;stroke:#61B233;stroke-width:2;stroke-linecap:round;stroke-opacity:0.5;}
+	.st12{fill:none;stroke:#61B233;stroke-width:5.6;stroke-linecap:round;stroke-opacity:0.5;}
+	.st13{fill:none;stroke:#61B233;stroke-width:16.4;stroke-linecap:round;stroke-opacity:0.5;}
+	.st14{fill:none;stroke:#FA7814;stroke-width:2;stroke-linecap:round;stroke-opacity:0.5;}
+	.st15{fill:none;stroke:#F03C8C;stroke-width:2;stroke-linecap:round;stroke-opacity:0.5;}
+	.st16{fill:none;stroke:#FA7814;stroke-width:5.6;stroke-linecap:round;stroke-opacity:0.5;}
+	.st17{fill:none;stroke:#FA7814;stroke-width:9.2;stroke-linecap:round;stroke-opacity:0.5;}
+	.st18{fill:none;stroke:#32BEE1;stroke-width:2;stroke-linecap:round;stroke-opacity:0.5;}
 </style>
-<g id="Layer_2">
+<g id="Layer_2_00000103248098781290321700000017853445780035108778_">
 	<rect class="st0" width="837.2" height="686.4"/>
 </g>
-<g id="Layer_1">
-	<text transform="matrix(1 0 0 1 85.685 59.417)" class="st1 st2 st3">Agriculture  </text>
-	<text transform="matrix(1 0 0 1 73.185 73.817)" class="st1 st2 st3">and pastoralism</text>
-	<text transform="matrix(1 0 0 1 111.9709 39.417)" class="st1 st2 st3">Democratic governance</text>
-	<text transform="matrix(1 0 0 1 214.9604 59.417)" class="st1 st2 st3">Disaster  </text>
-	<text transform="matrix(1 0 0 1 190.0604 73.817)" class="st1 st2 st3">r</text>
-	<text transform="matrix(1 0 0 1 194.7604 73.817)" class="st1 st2 st3">isk management</text>
-	<text transform="matrix(1 0 0 1 272.0192 39.417)" class="st1 st2 st3">Education</text>
-	<text transform="matrix(1 0 0 1 319.275 59.417)" class="st1 st2 st3">Environmental </text>
-	<text transform="matrix(1 0 0 1 332.475 73.817)" class="st1 st2 st3">monitorig</text>
-	<text transform="matrix(1 0 0 1 399.9625 39.417)" class="st1 st2 st3">Gender</text>
-	<text transform="matrix(1 0 0 1 438.1165 59.417)" class="st1 st2 st3">Misinformation</text>
-	<text transform="matrix(1 0 0 1 486.5719 39.417)" class="st1 st2 st3">Operations support</text>
-	<text transform="matrix(1 0 0 1 545.2938 59.417)" class="st1 st2 st3">Pollution and waste  </text>
-	<text transform="matrix(1 0 0 1 564.3938 73.817)" class="st1 st2 st3">management</text>
-	<text transform="matrix(1 0 0 1 639.6367 39.417)" class="st1 st2 st3">Tourism</text>
-	<text transform="matrix(1 0 0 1 705.6536 59.417)" class="st1 st2 st3">Urban </text>
-	<text transform="matrix(1 0 0 1 686.0536 73.817)" class="st1 st2 st3">development</text>
-	<text transform="matrix(1 0 0 1 147.6736 346.417)" class="st1 st4 st3">Network data</text>
-	<text transform="matrix(1 0 0 1 282.6994 346.417)" class="st1 st4 st3">Online posts</text>
-	<text transform="matrix(1 0 0 1 385.8117 346.417)" class="st1 st4 st3">Pre-trained AI models</text>
-	<text transform="matrix(1 0 0 1 534.3616 346.417)" class="st1 st4 st3">Remote sensing</text>
-	<text transform="matrix(1 0 0 1 67.7514 623.4171)" class="st1 st2 st3">Argentina</text>
-	<text transform="matrix(1 0 0 1 114.4743 653.4171)" class="st1 st2 st3">Bolivia</text>
-	<text transform="matrix(1 0 0 1 138.4691 623.4171)" class="st1 st2 st3">Cabo verde</text>
-	<text transform="matrix(1 0 0 1 178.3214 653.4171)" class="st1 st2 st3">Cameroon</text>
-	<text transform="matrix(1 0 0 1 222.26 623.4171)" class="st1 st2 st3">Ecuador</text>
-	<text transform="matrix(1 0 0 1 251.8946 653.4171)" class="st1 st2 st3">Guatemala</text>
-	<text transform="matrix(1 0 0 1 305.8591 623.4171)" class="st1 st2 st3">India</text>
-	<text transform="matrix(1 0 0 1 339.124 653.4171)" class="st1 st2 st3">Jordan</text>
-	<text transform="matrix(1 0 0 1 364.3522 623.4171)" class="st1 st2 st3">Kyrgyzstan</text>
-	<text transform="matrix(1 0 0 1 412.5048 653.4171)" class="st1 st2 st3">Malawi</text>
-	<text transform="matrix(1 0 0 1 439.2232 623.4171)" class="st1 st2 st3">Mauritania</text>
-	<text transform="matrix(1 0 0 1 491.6883 653.4171)" class="st1 st2 st3">Niger</text>
-	<text transform="matrix(1 0 0 1 526.6748 623.4171)" class="st1 st2 st3">North  </text>
-	<text transform="matrix(1 0 0 1 513.7748 637.8171)" class="st1 st2 st3">Macedonia</text>
-	<text transform="matrix(1 0 0 1 564.4451 653.4171)" class="st1 st2 st3">Serbia</text>
-	<text transform="matrix(1 0 0 1 597.2715 623.4171)" class="st1 st2 st3">Somalia</text>
-	<text transform="matrix(1 0 0 1 631.8439 653.4171)" class="st1 st2 st3">Tanzania</text>
-	<text transform="matrix(1 0 0 1 682.5033 623.4171)" class="st1 st2 st3">The  </text>
-	<text transform="matrix(1 0 0 1 667.3033 637.8171)" class="st1 st2 st3">Philipines</text>
-	<text transform="matrix(1 0 0 1 707.524 653.4171)" class="st1 st2 st3">Uruguay</text>
-	<text transform="matrix(1 0 0 1 745.9662 623.4171)" class="st1 st2 st3">Vietnam</text>
+<text transform="matrix(1 0 0 1 85.685 59.417)" class="st1 st2 st3">Agriculture  </text>
+<text transform="matrix(1 0 0 1 73.185 73.817)" class="st1 st2 st3">and pastoralism</text>
+<text transform="matrix(1 0 0 1 111.9709 39.417)" class="st1 st2 st3">Democratic governance</text>
+<text transform="matrix(1 0 0 1 214.9604 59.417)" class="st1 st2 st3">Disaster  </text>
+<text transform="matrix(1 0 0 1 190.0604 73.817)" class="st1 st2 st3">r</text>
+<text transform="matrix(1 0 0 1 194.7604 73.817)" class="st1 st2 st3">isk management</text>
+<text transform="matrix(1 0 0 1 272.0192 39.417)" class="st1 st2 st3">Education</text>
+<text transform="matrix(1 0 0 1 319.275 59.417)" class="st1 st2 st3">Environmental </text>
+<text transform="matrix(1 0 0 1 332.475 73.817)" class="st1 st2 st3">monitorig</text>
+<text transform="matrix(1 0 0 1 399.9625 39.417)" class="st1 st2 st3">Gender</text>
+<text transform="matrix(1 0 0 1 438.1165 59.417)" class="st1 st2 st3">Misinformation</text>
+<text transform="matrix(1 0 0 1 486.5719 39.417)" class="st1 st2 st3">Operations support</text>
+<text transform="matrix(1 0 0 1 545.2938 59.417)" class="st1 st2 st3">Pollution and waste  </text>
+<text transform="matrix(1 0 0 1 564.3938 73.817)" class="st1 st2 st3">management</text>
+<text transform="matrix(1 0 0 1 639.6367 39.417)" class="st1 st2 st3">Tourism</text>
+<text transform="matrix(1 0 0 1 705.6536 59.417)" class="st1 st2 st3">Urban </text>
+<text transform="matrix(1 0 0 1 686.0536 73.817)" class="st1 st2 st3">development</text>
+<text transform="matrix(1 0 0 1 147.6736 346.417)" class="st1 st4 st3">Network data</text>
+<text transform="matrix(1 0 0 1 282.6994 346.417)" class="st1 st4 st3">Online posts</text>
+<text transform="matrix(1 0 0 1 385.8117 346.417)" class="st1 st4 st3">Pre-trained AI models</text>
+<text transform="matrix(1 0 0 1 534.3616 346.417)" class="st1 st4 st3">Remote sensing</text>
+<text transform="matrix(1 0 0 1 67.7514 623.4171)" class="st1 st2 st3">Argentina</text>
+<text transform="matrix(1 0 0 1 114.4743 653.4171)" class="st1 st2 st3">Bolivia</text>
+<text transform="matrix(1 0 0 1 138.4691 623.4171)" class="st1 st2 st3">Cabo verde</text>
+<text transform="matrix(1 0 0 1 178.3214 653.4171)" class="st1 st2 st3">Cameroon</text>
+<text transform="matrix(1 0 0 1 222.26 623.4171)" class="st1 st2 st3">Ecuador</text>
+<text transform="matrix(1 0 0 1 251.8946 653.4171)" class="st1 st2 st3">Guatemala</text>
+<text transform="matrix(1 0 0 1 305.8591 623.4171)" class="st1 st2 st3">India</text>
+<text transform="matrix(1 0 0 1 339.124 653.4171)" class="st1 st2 st3">Jordan</text>
+<text transform="matrix(1 0 0 1 364.3522 623.4171)" class="st1 st2 st3">Kyrgyzstan</text>
+<text transform="matrix(1 0 0 1 412.5048 653.4171)" class="st1 st2 st3">Malawi</text>
+<text transform="matrix(1 0 0 1 439.2232 623.4171)" class="st1 st2 st3">Mauritania</text>
+<text transform="matrix(1 0 0 1 491.6883 653.4171)" class="st1 st2 st3">Niger</text>
+<text transform="matrix(1 0 0 1 526.6748 623.4171)" class="st1 st2 st3">North  </text>
+<text transform="matrix(1 0 0 1 513.7748 637.8171)" class="st1 st2 st3">Macedonia</text>
+<text transform="matrix(1 0 0 1 564.4451 653.4171)" class="st1 st2 st3">Serbia</text>
+<text transform="matrix(1 0 0 1 597.2715 623.4171)" class="st1 st2 st3">Somalia</text>
+<text transform="matrix(1 0 0 1 631.8439 653.4171)" class="st1 st2 st3">Tanzania</text>
+<text transform="matrix(1 0 0 1 682.5033 623.4171)" class="st1 st2 st3">The  </text>
+<text transform="matrix(1 0 0 1 667.3033 637.8171)" class="st1 st2 st3">Philipines</text>
+<text transform="matrix(1 0 0 1 707.524 653.4171)" class="st1 st2 st3">Uruguay</text>
+<text transform="matrix(1 0 0 1 745.9662 623.4171)" class="st1 st2 st3">Vietnam</text>
+<g>
 	<path class="st5" d="M118.7,84.4c0,123.5,463.5,123.5,463.5,247"/>
 	<path class="st6" d="M360.5,84.4c0,123.5,221.7,123.5,221.7,247"/>
 	<path class="st7" d="M239.6,84.4c0,123.5,342.6,123.5,342.6,247"/>
 	<path class="st8" d="M602.4,84.4c0,123.5-20.2,123.5-20.2,247"/>
-	<path class="st9" d="M481.4,84.4c0,123.5-161.2,123.5-161.2,247"/>
-	<path class="st10" d="M179.1,49.4c0,141,272.1,141,272.1,282"/>
-	<path class="st11" d="M421,49.4c0,141-100.8,141-100.8,282"/>
-	<path class="st10" d="M541.9,49.4c0,141-90.7,141-90.7,282"/>
-	<path class="st10" d="M421,49.4c0,141,30.2,141,30.2,282"/>
-	<path class="st10" d="M723.3,84.4c0,123.5-272.1,123.5-272.1,247"/>
-	<path class="st12" d="M662.8,49.4c0,141-342.6,141-342.6,282"/>
-	<path class="st13" d="M421,49.4c0,141-231.8,141-231.8,282"/>
-	<path class="st10" d="M300.1,49.4c0,141,151.2,141,151.2,282"/>
+	<path class="st6" d="M481.4,84.4c0,123.5-161.2,123.5-161.2,247"/>
+	<path class="st6" d="M179.1,49.4c0,141,272.1,141,272.1,282"/>
+	<path class="st7" d="M421,49.4c0,141-100.8,141-100.8,282"/>
+	<path class="st6" d="M541.9,49.4c0,141-90.7,141-90.7,282"/>
+	<path class="st6" d="M421,49.4c0,141,30.2,141,30.2,282"/>
+	<path class="st6" d="M723.3,84.4c0,123.5-272.1,123.5-272.1,247"/>
+	<path class="st9" d="M662.8,49.4c0,141-342.6,141-342.6,282"/>
+	<path class="st6" d="M421,49.4c0,141-231.8,141-231.8,282"/>
+	<path class="st6" d="M300.1,49.4c0,141,151.2,141,151.2,282"/>
 	<path class="st7" d="M582.2,356.4c0,126-262,126-262,252"/>
 	<path class="st6" d="M582.2,356.4c0,141-449.1,141-449.1,282"/>
 	<path class="st6" d="M582.2,356.4c0,126-112.3,126-112.3,252"/>
 	<path class="st6" d="M582.2,356.4c0,126,112.3,126,112.3,252"/>
-	<path class="st11" d="M320.2,356.4c0,141,37.4,141,37.4,282"/>
+	<path class="st7" d="M320.2,356.4c0,141,37.4,141,37.4,282"/>
 	<path class="st6" d="M582.2,356.4c0,126-336.9,126-336.9,252"/>
 	<path class="st6" d="M582.2,356.4c0,141,0,141,0,282"/>
-	<path class="st10" d="M451.2,356.4c0,126-355.6,126-355.6,252"/>
-	<path class="st9" d="M320.2,356.4c0,141,411.7,141,411.7,282"/>
-	<path class="st10" d="M451.2,356.4c0,141-168.4,141-168.4,282"/>
-	<path class="st10" d="M451.2,356.4c0,141,131,141,131,282"/>
-	<path class="st10" d="M451.2,356.4c0,126,93.6,126,93.6,252"/>
+	<path class="st6" d="M451.2,356.4c0,126-355.6,126-355.6,252"/>
+	<path class="st6" d="M320.2,356.4c0,141,411.7,141,411.7,282"/>
+	<path class="st6" d="M451.2,356.4c0,141-168.4,141-168.4,282"/>
+	<path class="st6" d="M451.2,356.4c0,141,131,141,131,282"/>
+	<path class="st6" d="M451.2,356.4c0,126,93.6,126,93.6,252"/>
 	<path class="st6" d="M582.2,356.4c0,141-374.3,141-374.3,282"/>
-	<path class="st9" d="M320.2,356.4c0,126,74.9,126,74.9,252"/>
+	<path class="st6" d="M320.2,356.4c0,126,74.9,126,74.9,252"/>
 	<path class="st6" d="M582.2,356.4c0,126,37.4,126,37.4,252"/>
-	<path class="st9" d="M320.2,356.4c0,141,112.3,141,112.3,282"/>
+	<path class="st6" d="M320.2,356.4c0,141,112.3,141,112.3,282"/>
 	<path class="st6" d="M582.2,356.4c0,126-187.1,126-187.1,252"/>
-	<path class="st13" d="M189.2,356.4c0,141,393,141,393,282"/>
+	<path class="st6" d="M189.2,356.4c0,141,393,141,393,282"/>
 	<path class="st6" d="M582.2,356.4c0,126-411.7,126-411.7,252"/>
-	<path class="st9" d="M320.2,356.4c0,141,336.9,141,336.9,282"/>
+	<path class="st6" d="M320.2,356.4c0,141,336.9,141,336.9,282"/>
 	<path class="st6" d="M582.2,356.4c0,126,187.1,126,187.1,252"/>
 	<path class="st6" d="M582.2,356.4c0,141-74.9,141-74.9,282"/>
 	<path class="st6" d="M582.2,356.4c0,141-299.4,141-299.4,282"/>
-	<path class="st10" d="M451.2,356.4c0,141-243.3,141-243.3,282"/>
+	<path class="st6" d="M451.2,356.4c0,141-243.3,141-243.3,282"/>
 </g>
+<path class="st10" d="M118.7,84.4c0,123.5,463.5,123.5,463.5,247"/>
+<path class="st11" d="M360.5,84.4c0,123.5,221.7,123.5,221.7,247"/>
+<path class="st12" d="M239.6,84.4c0,123.5,342.6,123.5,342.6,247"/>
+<path class="st13" d="M602.4,84.4c0,123.5-20.2,123.5-20.2,247"/>
+<path class="st14" d="M481.4,84.4c0,123.5-161.2,123.5-161.2,247"/>
+<path class="st15" d="M179.1,49.4c0,141,272.1,141,272.1,282"/>
+<path class="st16" d="M421,49.4c0,141-100.8,141-100.8,282"/>
+<path class="st15" d="M541.9,49.4c0,141-90.7,141-90.7,282"/>
+<path class="st15" d="M421,49.4c0,141,30.2,141,30.2,282"/>
+<path class="st15" d="M723.3,84.4c0,123.5-272.1,123.5-272.1,247"/>
+<path class="st17" d="M662.8,49.4c0,141-342.6,141-342.6,282"/>
+<path class="st18" d="M421,49.4c0,141-231.8,141-231.8,282"/>
+<path class="st15" d="M300.1,49.4c0,141,151.2,141,151.2,282"/>
+<path class="st12" d="M582.2,356.4c0,126-262,126-262,252"/>
+<path class="st11" d="M582.2,356.4c0,141-449.1,141-449.1,282"/>
+<path class="st11" d="M582.2,356.4c0,126-112.3,126-112.3,252"/>
+<path class="st11" d="M582.2,356.4c0,126,112.3,126,112.3,252"/>
+<path class="st16" d="M320.2,356.4c0,141,37.4,141,37.4,282"/>
+<path class="st11" d="M582.2,356.4c0,126-336.9,126-336.9,252"/>
+<path class="st11" d="M582.2,356.4c0,141,0,141,0,282"/>
+<path class="st15" d="M451.2,356.4c0,126-355.6,126-355.6,252"/>
+<path class="st14" d="M320.2,356.4c0,141,411.7,141,411.7,282"/>
+<path class="st15" d="M451.2,356.4c0,141-168.4,141-168.4,282"/>
+<path class="st15" d="M451.2,356.4c0,141,131,141,131,282"/>
+<path class="st15" d="M451.2,356.4c0,126,93.6,126,93.6,252"/>
+<path class="st11" d="M582.2,356.4c0,141-374.3,141-374.3,282"/>
+<path class="st14" d="M320.2,356.4c0,126,74.9,126,74.9,252"/>
+<path class="st11" d="M582.2,356.4c0,126,37.4,126,37.4,252"/>
+<path class="st14" d="M320.2,356.4c0,141,112.3,141,112.3,282"/>
+<path class="st11" d="M582.2,356.4c0,126-187.1,126-187.1,252"/>
+<path class="st18" d="M189.2,356.4c0,141,393,141,393,282"/>
+<path class="st11" d="M582.2,356.4c0,126-411.7,126-411.7,252"/>
+<path class="st14" d="M320.2,356.4c0,141,336.9,141,336.9,282"/>
+<path class="st11" d="M582.2,356.4c0,126,187.1,126,187.1,252"/>
+<path class="st11" d="M582.2,356.4c0,141-74.9,141-74.9,282"/>
+<path class="st11" d="M582.2,356.4c0,141-299.4,141-299.4,282"/>
+<path class="st15" d="M451.2,356.4c0,141-243.3,141-243.3,282"/>
 </svg>
