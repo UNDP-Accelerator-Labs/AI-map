@@ -157,7 +157,7 @@ Note we do not cover initiatives like crowdmapping here, as these are covered by
 ![Areas x datasources x labs](/imgs/stats/data_and_applications_colors.png)
 *Main data sources and application areas per lab*
 
-Remote sensing data, whether low quality satellite imagery of high resolution drone imagery, is the most commonly used data source in the Accelerator Labs Network. This is likely due in part to the reelative simplicity in accessing imagery and the maturity of the computational techniques. 
+Remote sensing data, whether low quality satellite imagery of high resolution drone imagery, is the most commonly used data source in the Accelerator Labs Network. This is likely due in part to the reelative simplicity of accessing imagery and the maturity of the computational techniques. 
 
 We also see a trend in applicaion areas for this type of data. Agriculture and pastoralism, and pollution and waste management are most common across labs, often trying to detect features in the imagery, like the aggregation of solid waste or crop diseases, or for deriving labd cover and land use maps, and vegetation indices.
 
