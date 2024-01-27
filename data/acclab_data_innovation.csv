@@ -10,7 +10,7 @@ Feature detection,Remote sensing,Satellite imagery,Environmental monitorig,Mine 
 "Land cover/ land use classification, and vegetation indices",Remote sensing,Satellite imagery,Agriculture and pastoralism,Detection of sustained grazing areas over time ,Somalia,,RBAS,
 "Land cover/ land use classification, and vegetation indices",Remote sensing,Satellite imagery,Agriculture and pastoralism,Detection of sustained dry croplands over time,Niger,,RBA,
 "Land cover/ land use classification, and vegetation indices",Remote sensing,Satellite imagery,Agriculture and pastoralism,Detection of forest boundaries over time,Ecuador,,RBLAC,
-"Land cover/ land use classification, and vegetation indices",Remote sensing,Satellite imagery,Agriculture and pastoralism,Multilayer map generation for agriculture,India,,RBAP,
+"Land cover/ land use classification, and vegetation indices",Remote sensing,Satellite imagery,Agriculture and pastoralism,Multilayer map generation for agriculture,India,https://github.com/undpindia/dicra; https://dicra.undp.org.in/,RBAP,
 "Land cover/ land use classification, and vegetation indices",Remote sensing,Satellite imagery,Disaster risk management,Flood detection,Mauritania,,RBA,
 "Land cover/ land use classification, and vegetation indices",Remote sensing,Satellite imagery,Disaster risk management,Landslide detection,Kyrgyzstan,,RBEC,Lack of training data
 Topic analysis and classification,Online posts,Online reviews,Tourism,Topic analysis of tourist reviews,Jordan,https://public.tableau.com/app/profile/mohtaz.younes/viz/SentimentAnalysisofTourisminJordanonTripAdvisor/Main?publish=yes,RBAS,
