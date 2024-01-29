@@ -155,7 +155,7 @@ The next frontier for many of these projects is to establish data collaboratives
 	</tbody>
 </table>
 
-Note we do not cover initiatives like crowdmapping here, as these are covered by the collective intelligence work of the labs.
+*Note we do not cover initiatives like crowdmapping here, as these are covered by the collective intelligence work of the labs.*
 
 Remote sensing data, whether low quality satellite imagery of high resolution drone imagery, is the most commonly used data source in the Accelerator Labs Network. This is likely due in part to the relative simplicity of accessing imagery and the maturity of the computational techniques. 
 
