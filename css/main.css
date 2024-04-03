@@ -21,6 +21,8 @@ $c-light-yellow: #FFF32A;
 $c-dark-grey: #000000;
 $c-mid-grey: #646464;
 $c-light-grey: #969696;
+
+$c-light-2: #e5e5e5;
 */
 html {
 	height: 100%;
@@ -250,4 +252,10 @@ g.title text {
 }
 g.title text .emph {
 	font-size: 36px;
+}
+path.connection.dim {
+	stroke: #e5e5e5 !important;
+}
+g.base.dim text {
+	fill: #e5e5e5 !important;
 }
