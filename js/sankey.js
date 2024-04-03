@@ -22,6 +22,8 @@ const colors = [
 	basecolors['light-green']
 ]
 
+const offsetFirstRow = false
+
 function setupSVG (kwargs) {
 	const { width, height } = kwargs
 	const svg = d3.select('svg')
@@ -34,7 +36,7 @@ function setupSVG (kwargs) {
 	return svg
 }
 
-function drawDendogram () {
+function drawSankey () {
 	const { clientWidth: cw, clientHeight: ch, offsetWidth: ow, offsetHeight: oh } = d3.select('body').node()
 	const width = Math.round(Math.min(cw ?? ow, ch ?? oh))
 	const height = width
@@ -46,7 +48,7 @@ function drawDendogram () {
 	d3.csv('../data/acclab_data_innovation.csv')
 	.then(data => {
 		data.shuffle()
-		const levels = ['Lab', 'Aggregate datasource', 'Area'].reverse()
+		const levels = ['Aggregate datasource', 'Technique', 'Area', 'Lab']//.reverse()
 		// const levels = ['Lab', 'Datasource', 'Aggregate datasource', 'Area'].reverse()
 		
 		const lists = levels.map(d => {
@@ -78,22 +80,49 @@ function drawDendogram () {
 			})
 		}).attr('transform', (d, i) => {
 			let y = 0
-			if (d.level === 0) {
-				if (i % 2 !== 0) y = -45
-				else y = -15
-			} else if (d.level % 2 === 0) {
-				if (i % 2 !== 0) y = 45
-				else y = 15
+			
+			if (offsetFirstRow) {
+				if (d.level === 0) {
+					if (i % 2 !== 0) y = -45
+					else y = -15
+				} else if (d.level % 3 === 0) {
+					if (i % 2 !== 0) y = 45
+					else y = 15
+				}
+			} else {
+				if (d.level === 0) {
+					y = -15
+				} else if (d.level % 3 === 0) {
+					if (i % 2 !== 0) y = 45
+					else y = 15
+				}
 			}
+			
 			return `translate(${[x[d.level](i + 1), y]})`
 		})
-		base.addElems('text')
-		.styles({
-			'text-anchor': 'middle',
-			'font-face': 'Helvetica, Arial, Sans-serif',
-			'font-size': '12px',
-			'fill': basecolors['mid-grey'],
-		}).text(d => d.value)
+
+		const multiline = false
+		if (multiline) {
+			base.addElems('text')
+			.styles({
+				'text-anchor': 'middle',
+				'font-face': 'Helvetica, Arial, Sans-serif',
+				'font-size': '12px',
+				'fill': basecolors['mid-grey'],
+			}).addElems('tspan', 'line', d => d.value.trim().split(' '))
+			.attrs({
+				'x': 0,
+				'dy': (d, i) => i === 0 ? 0 : 12 * 1.3,
+			}).text(d => d)
+		} else {
+			base.addElems('text')
+			.styles({
+				'text-anchor': 'middle',
+				'font-face': 'Helvetica, Arial, Sans-serif',
+				'font-size': '12px',
+				'fill': basecolors['mid-grey'],
+			}).text(d => d.value)
+		}
 
 		let hierarchy = []
 		levels.forEach((d, i) => {
@@ -109,13 +138,19 @@ function drawDendogram () {
 
 					let x1 = x[levels.indexOf(prev)](sources.indexOf(c.source) + 1)
 					let x2 = x[levels.indexOf(d)](targets.indexOf(c.target) + 1)
-					let y1 = levels.indexOf(prev) % 2 === 0 ? y(levels.indexOf(prev)) : y(levels.indexOf(prev)) + 10
-					let y2 = levels.indexOf(d) % 2 === 0 ? y(levels.indexOf(d)) : y(levels.indexOf(d)) - 15
+					let y1 = levels.indexOf(prev) % 3 === 0 ? y(levels.indexOf(prev)) : y(levels.indexOf(prev)) + 10
+					let y2 = levels.indexOf(d) % 3 === 0 ? y(levels.indexOf(d)) : y(levels.indexOf(d)) - 15
 
-					if (i - 1 === 0) {
-						if (sources.indexOf(c.source) % 2 !== 0) y1 -= 35
-					} else if (i % 2 === 0) {
-						if (targets.indexOf(c.target) % 2 !== 0) y2 += 30
+					if (offsetFirstRow) {
+						if (i - 1 === 0) {
+							if (sources.indexOf(c.source) % 2 !== 0) y1 -= 35
+						} else if (i % 3 === 0) {
+							if (targets.indexOf(c.target) % 2 !== 0) y2 += 30
+						}
+					} else {
+						if (i % 3 === 0) {
+							if (targets.indexOf(c.target) % 2 !== 0) y2 += 30
+						}
 					}
 
 					c.from = [x1, y1]
@@ -127,6 +162,7 @@ function drawDendogram () {
 			}
 		})
 		hierarchy = hierarchy.flat()
+		console.log(hierarchy)
 
 		const w = d3.scaleLinear()
 			.domain([1, d3.max(hierarchy, d => d.count)])
@@ -136,9 +172,10 @@ function drawDendogram () {
 		.attr('d', d => `M ${d.from.join(' ')} C ${d.q1.join(' ')}, ${d.q2.join(' ')}, ${d.to.join(' ')}`)
 		.styles({
 			'stroke': d => {
-				const values = lists.find(c => c.key === 'Aggregate datasource').values
-				if (values.includes(d.source)) return colors[values.indexOf(d.source)]
-				else if (values.includes(d.target)) return colors[values.indexOf(d.target)]
+				const { values } = lists.find(c => c.key === 'Aggregate datasource')
+				if (values.includes(d.values[0]['Aggregate datasource'])) return colors[values.indexOf(d.values[0]['Aggregate datasource'])]
+				// else if (values.includes(d.target)) return colors[values.indexOf(d.target)]
+				else return 'pink'
 				
 			},'fill': 'none',
 			'stroke-width': d => w(d.count),
@@ -152,4 +189,4 @@ function drawDendogram () {
 }
 
 
-document.addEventListener('DOMContentLoaded', drawDendogram)
+document.addEventListener('DOMContentLoaded', drawSankey)

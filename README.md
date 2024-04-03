@@ -2,10 +2,10 @@
 
 - [Download the data](https://github.com/UNDP-Accelerator-Labs/AI-map/blob/main/data/acclab_data_innovation.csv)
 
-![Areas x datasources x labs](/imgs/stats/data_and_applications_colors.png)
+![Areas x datasources x labs](/imgs/stats/sankey_20240402.png)
 *Main data sources and application areas per lab*
 
-Over the past four years, the [UNDP Accelerator Labs Network](https://www.undp.org/acceleratorlabs) has been pushing for the mainstreaming of data innovation in sustainable development practice. Here we take stock of these efforts and highlight a certain convergence between computaional techniques, datasources, and application areas. Note the work of the labs is action oriented. Other application areas and convergences undoubtably exist, typically in academic work. The purpose of this compliation is to highlight the application readiness of these techniques x datasources for specific development application areas around the world.
+Over the past four years, the [UNDP Accelerator Labs Network](https://www.undp.org/acceleratorlabs) has been pushing for the mainstreaming of data innovation in sustainable development practice. Here we take stock of these efforts and highlight a certain convergence between computational techniques, datasources, and application areas. Note the work of the labs is action oriented. Other application areas and convergences undoubtably exist, typically in academic work. The purpose of this compilation is to highlight the application readiness of these techniques x datasources for specific development application areas around the world.
 
 The focus is intentionally reductive. It is on data innovation "projects". It should be noted however, that these are all part of broader portfolios of interventions. Overall, the UNDP Accelerator Labs Network sees data innovation a means to an end, not as an objective in itself. 
 

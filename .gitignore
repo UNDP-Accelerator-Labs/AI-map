@@ -1,2 +1,4 @@
 .DS_Store
 env/
+imgs/stats/sankey_20240402_*
+*.ai
