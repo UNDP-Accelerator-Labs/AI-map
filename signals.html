@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<script src='https://cdn.jsdelivr.net/npm/d3@5'></script>
+	<script src='https://d3js.org/d3-selection-multi.v1.min.js'></script>
+	<script src='js/d3.prototype.extensions.js'></script>
+
+	<link rel='stylesheet' type='text/css' href='css/main.css'>
+	<link rel='stylesheet' type='text/css' href='css/footer.css'>
+	<link rel='stylesheet' type='text/css' href='css/loader.css'>
+	<style type='text/css'>
+		
+
+
+		.st0{fill:none;stroke:#000000;stroke-width:0.5;stroke-miterlimit:10;}
+		.st1{fill:none;stroke:#000000;stroke-width:2;stroke-miterlimit:10;}
+		.st2{fill:#FFFFFF;}
+		.st5{fill:none;stroke:#000000;stroke-width:3;stroke-miterlimit:10;}
+		.st7{fill:none;stroke:#000000;stroke-miterlimit:10;}
+
+
+	</style>
+
+</head>
+
+<body>
+<header>
+	<a href='https://docs.google.com/forms/d/e/1FAIpQLSemSMY4hrzjuAE1NTNXM06oQx7ZP_niWZA8pWCngIFwNXhDIQ/viewform' target='_blank'>Contribute</a>
+	<img id='logo' src='imgs/branding/UNDP_accelerator_labs_logo_vertical_color_RGB.png'>
+</header>
+
+<div class='container'>
+	<!-- <div class='btn-row'>
+		<button type='button' data-type='work' class='active'>Ongoing or past work</button>
+		<button type='button' data-type='opportunity' class='active'>Opportunities</button>
+		<button type='button' data-type='signal' class='active'>Signals</button>
+	</div> -->
+	<div class='left-col'>
+		<svg version='1.1' id='map' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' x='0px' y='0px'
+				 viewBox='0 0 1500 1325' preserveAspectRatio='xMidYMid meet'>
+			
+			<ellipse class='st0 orbit secondary' cx='750' cy='596' rx=0 ry=0 data-rx='550' data-ry='255'/>
+			
+			<g class='title'>
+				<text transform='matrix(1 0 0 1 730 1157.8423)'>
+					<tspan x='0' y='0' class='emph'>AI</tspan>
+					<tspan x='-68.8' y='28.8'>(possible) areas</tspan>
+					<tspan x='-71' y='57.6'>of intervention</tspan>
+				</text>
+				<g class='connector'>
+					<circle cx='750' cy='662.5' r=0 data-r='5'/>
+					<line class='st1' x1='750' y1='662.5' x2='750' y2='662.5' data-y2='1112'/>
+				</g>
+			</g>
+		</svg>
+	</div>
+	<div class='right-col'>
+	</div>
+</div>
+<footer>
+	<div class='footer-row'>
+		<div class='footer-column left'>
+			<div class='outer'>
+				<img class='logo' src='imgs/branding/UNDP_accelerator_labs_logo_vertical_white.png' alt='UNDP accelerator labs logo'>
+				<small>UNDP Accelerator Labs</small>
+			</div>
+			<div class='inner'>
+				<h3>Links</h3>
+				<!-- TO DO: TRANSLATE -->
+				<ul>
+					<li>
+						<a target='_blank' href='https://www.undp.org/acceleratorlabs'>
+						About Us
+						</a>
+						<!-- TO DO: TRANSLATE -->
+					</li>
+					<li>
+						<a target='_blank' href='https://www.undp.org/accountability/audit/investigations'>
+						Report fraud, abuse, misconduct
+						<!-- TO DO: TRANSLATE -->
+						</a>
+					</li>
+					<li>
+						<a target='_blank' href='https://www.undp.org/scam-alert'>
+						Scam Alert
+						<!-- TO DO: TRANSLATE -->
+						</a>
+					</li>
+					<li>
+						<a target='_blank' href='https://www.undp.org/copyright-terms-use'>
+						Terms of Use
+						<!-- TO DO: TRANSLATE -->
+						</a>
+					</li>
+					<li>
+						<a target='_blank' href='https://forms.office.com/Pages/ResponsePage.aspx?id=Xtvls0QpN0iZ9XSIrOVDGbiZROH1lsFMla8_BsgmZ6lUOU1SNkVFWkRCVkFaTzBVWExSNkwyNkJGNi4u'>
+						Submit a request about our platforms
+						<!-- TO DO: TRANSLATE -->
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class='footer-column center'>
+			<div class='inner'>
+				<h3>Our Partners</h3>
+				<!-- TO DO: TRANSLATE -->
+				<img class='footer-img' src='imgs/branding/UNDP_Acc_Labs_All_Partners_horiz_white.png'	alt='UNDP accelerator Partnerslogo'>
+			</div>
+		</div>
+		<div class='footer-column right'>
+			<div class='inner'>
+				<!-- <h3>Follow Us</h3>
+				<div class='social-media-links'>
+					<ul>
+						<li>
+							<a target='_blank' href='https://www.linkedin.com/company/undp-accelerator-labs'>
+								<i class='fa fa-linkedin' > </i>
+							</a>
+						</li>
+						<li>
+							<a target='_blank' href='https://twitter.com/UNDPAccLabs'>
+								<i class='fa fa-twitter'> </i>
+							</a>
+						</li>
+						<li>
+							<a target='_blank' href='https://www.instagram.com/acceleratorlabs/'>
+								<i class='fa fa-instagram'> </i>
+							</a>
+						</li>
+					</ul>
+				</div> -->
+			</div>
+		</div>
+	</div>
+	<div class='footer-row signature'>
+		<div class='inner'>
+			<p>&copy; 2023 United Nations Development Programme</p>
+		</div>
+		<!-- TO DO: TRANSLATE -->
+	</div>
+</footer>
+
+<script type='text/javascript'>
+
+	const svg = d3.select('svg')
+	const w = +svg.node().attributes.viewBox.value.split(' ')[2]
+	const h = +svg.node().attributes.viewBox.value.split(' ')[3]
+
+	function addPrimaryNodes (data) {
+		const orbit_width = 325
+		const nodescale = d3.scaleLinear()
+		.range([60, 120])
+		.domain([0, d3.max(data.map(d => d3.sum(d.types, c => c.count)).flat())])
+
+		const orbit = svg.addElems('circle', 'orbit primary')
+		.attrs({
+			'r': 0,
+			'cx': w / 2,
+			'cy': h / 2
+		}).transition()
+		.duration(750)
+		.attr('r', orbit_width)
+		.style('opacity', 1)
+
+		const g = svg.addElems('g', 'node primary', data)
+		.each(function (d) { d3.select(this).classed(d.category.toLowerCase(), true) })
+		.attr('transform', (d, i) => `translate(${ polar2cartesian(orbit_width, (360 / data.length) * i, w / 2, h / 2) })`)
+
+		g.addElems('circle', 'outline')
+		.attr('r', 0)
+		g.selectAll('.node.primary circle.outline')
+		.transition()
+		.duration(500)
+		.delay((d, i) => 75 + i * 50)
+		.attr('r', d => nodescale(d3.sum(d.types, c => c.count)))
+		
+		g.addElems('circle', 'bg')
+		.attr('r', 0)
+		.on('click', function () { 
+			const sel = d3.select(this).findAncestor('node')
+			sel.classed('expanded', !sel.classed('expanded'))
+			sel.call(addChildNodes, { expand: sel.classed('expanded'), nodescale })
+		})
+		g.selectAll('.node.primary circle.bg')
+		.transition()
+		.duration(500)
+		.delay((d, i) => 75 + i * 50)
+		.attr('r', 50)
+
+		g.addElems('text')
+		.attr('y', 5)
+		.text(d => d.category)
+		g.selectAll('.node.primary text')
+		.transition()
+		.duration(500)
+		.delay((d, i) => 150 + i * 50)
+		.style('opacity', 1)
+
+		g.addElems('line', 'underline')
+		.attrs({
+			'x1': -25,
+			'x2': -25,
+			'y1': 15,
+			'y2': 15
+		})
+		g.selectAll('.node.primary line.underline')
+		.transition()
+		.duration(500)
+		.delay((d, i) => 300 + i * 150)
+		.attr('x2', 25)
+
+		g.insertElems('text', 'rect', 'bg')
+		.each(function () {
+			const sel = d3.select(this)
+			const text = d3.select(this.parentNode).select('text')
+			const { x, width } = text.node().getBBox()
+			if (width > 90) sel.attrs({
+				'width': width + 40,
+				'height': 50,
+				'x': x - 20,
+				'y': -30
+			})
+			else sel.remove()
+		})
+	}
+
+	function addSecondaryNodes (data) {
+		const orbit = svg.select('ellipse.orbit.secondary')
+		const rx = +orbit.attr('data-rx')
+		const ry = +orbit.attr('data-ry')
+		const cx = +orbit.attr('cx')
+		const cy = +orbit.attr('cy')
+
+		const g = svg.addElems('g', 'node secondary', data)
+		.each(function (d) { d3.select(this).classed(d.category.toLowerCase(), true) })
+		.attr('transform', (d, i) => `translate(${ positionOnEllipse(rx, ry, (i * Math.PI / data.length) - Math.PI / 8, cx, cy) })`)
+
+		g.addElems('circle', 'outline')
+		.attr('r', 0)
+		g.selectAll('.node.secondary circle.outline')
+		.transition()
+		.duration(500)
+		.delay((d, i) => 75 + i * 50)
+		.attr('r', 90)
+		
+		g.addElems('circle', 'bg')
+		.attr('r', 0)
+		g.selectAll('.node.secondary circle.bg')
+		.transition()
+		.duration(500)
+		.delay((d, i) => 75 + i * 50)
+		.attr('r', 50)
+
+		g.addElems('text')
+		.attr('y', 5)
+		.text(d => d.category)
+		g.selectAll('.node.secondary text')
+		.transition()
+		.duration(500)
+		.delay((d, i) => 150 + i * 50)
+		.style('opacity', 1)
+
+		g.addElems('line', 'underline')
+		.attrs({
+			'x1': -25,
+			'x2': -25,
+			'y1': 15,
+			'y2': 15
+		})
+		g.selectAll('.node.secondary line.underline')
+		.transition()
+		.duration(500)
+		.delay((d, i) => 300 + i * 150)
+		.attr('x2', 25)
+
+		g.insertElems('text', 'rect', 'bg')
+		.each(function () {
+			const sel = d3.select(this)
+			const text = d3.select(this.parentNode).select('text')
+			const { x, width } = text.node().getBBox()
+			if (width > 90) sel.attrs({
+				'width': width + 40,
+				'height': 50,
+				'x': x - 20,
+				'y': -30
+			})
+			else sel.remove()
+		})
+	}
+
+	function addChildNodes (sel, kwargs) {
+		const { expand, nodescale } = kwargs
+		const g = sel.insertElems(':first-child', 'g', 'leaves')
+		const category = g.datum().category
+		const n = g.datum().types?.length ?? 0
+		const orbit_width = nodescale(d3.sum(g.datum().types, d => d.count)) + nodescale(d3.max(g.datum().types, d => d.count)) + 15
+		
+		g.addElems('circle', 'orbit', d => d.types?.length > 0 ? [d] : [])
+		.attr('r', expand ? 0 : orbit_width)
+		.transition()
+		.duration(1000)
+		.attr('r', expand ? orbit_width : 0)
+		.style('opacity', expand ? 1 : 0)
+		.on('end', function () {
+			if (!expand) d3.select(this).remove()
+		})
+		
+		const leaves = g.addElems('g', 'leaf', d => d.types || [])
+		.attr('transform', (d, i) => `translate(${ polar2cartesian(orbit_width, (360 / n) * i + 60) })`)
+		
+		leaves.addElems('circle', 'outline')
+		.attr('r', d => expand ? 0 : nodescale(d.count))
+		g.selectAll('.leaf circle.outline')
+		.transition()
+		.duration(500)
+		.delay((d, i) => 75 + i * 50)
+		.attr('r', d => expand ? nodescale(d.count) : 0)
+		.on('end', function () {
+			if (!expand) d3.select(this).remove()
+		})
+
+		leaves.addElems('circle', 'bg')
+		.attr('r', expand ? 0 : 50)
+		.on('click', function (d) {
+			const { type } = d
+			const leaf = d3.select(this.parentNode)
+			d3.selectAll('g.active').filter(function () { return this !== leaf.node() }).classed('active', false)
+			leaf.classed('active', !leaf.classed('active'))
+			if (d3.select(this.parentNode).classed('active')) fetchdata({ category, type })
+			else clearPanel()
+		})
+		g.selectAll('.leaf circle.bg')
+		.transition()
+		.duration(500)
+		.delay((d, i) => 150 + i * 50)
+		.attr('r', expand ? 50 : 0)
+		.on('end', function () {
+			if (!expand) d3.select(this).remove()
+		})
+		
+		leaves.addElems('text')
+		.attr('y', 5)
+		.text(d => d.type)
+		g.selectAll('.leaf text')
+		.transition()
+		.duration(500)
+		.delay((d, i) => 150 + i * 50)
+		.style('opacity', expand ? 1 : 0)
+		.on('end', function () {
+			if (!expand) d3.select(this).remove()
+		})
+
+		leaves.addElems('line', 'underline')
+		.attrs({
+			'x1': -25,
+			'x2': expand ? -25 : 25,
+			'y1': 15,
+			'y2': 15
+		})
+		g.selectAll('.leaf line.underline')
+		.transition()
+		.duration(500)
+		.delay((d, i) => 300 + i * 150)
+		.attr('x2', expand ? 25 : -25)
+		.on('end', function () {
+			if (!expand) d3.select(this).remove()
+		})
+
+		leaves.insertElems('text', 'rect', 'bg')
+		.each(function (d) {
+			const sel = d3.select(this)
+
+			const text = d3.select(this.parentNode).select('text')
+			const { x, width } = text.node().getBBox()
+			d.x = x
+			d.width = width
+		}).attrs({
+			'width': d => expand ? 0 : d.width + 40,
+			'height': 50,
+			'x': d => d.x - 20,
+			'y': -30
+		})
+		g.selectAll('.leaf rect.bg')
+		.transition()
+		.duration(500)
+		.delay((d, i) => 300 + i * 150)
+		.attr('width', d => expand ? d.width + 40 : 0)
+		.on('end', function () {
+			if (!expand) d3.select(this).remove()
+		})
+
+		if (!expand) clearPanel()
+	}
+
+	// LOAD STRUCTURE 
+	// https://script.google.com/macros/s/AKfycbxjMjmaf-jXpoSz-ncuLPw9MZp2f9ERk8RYDiajDldhcP4l7d6ONMX7j5yGumIq13Yv/exec
+	// const data = [{ category: 'tech', types: [{ type: 'data', count: 2 }, { type: 'models', count: 1 }, { type: 'production', count: 2 }, { type: 'repositories', count: 2 }] }, { category: 'policy', type: [] }, { category: 'application', type: [] }]
+	// console.log(data)
+	// addPrimaryNodes(data)
+
+	(function fetchStructure (category) {
+		addLoader()
+
+		// const api_endpoint = new URL('https://script.google.com/macros/s/AKfycbzX-I9BL2fyU0lSlQWmWAL3rwsqR8IfaWPrtIDFNAQGMU6iL3CMJoA1tsO6bp76nPcj/exec')
+
+		const api_endpoint = new URL('https://script.google.com/macros/s/AKfycbzhV4xWTan7xRHNGBTWfESVCjurz69xQEsQnv1m6vNSqe1WL69ManUMjLNOq7l7uqXs0g/exec')
+		api_endpoint.searchParams.append('req', 'structure')
+
+		fetch(api_endpoint.href, { method: 'GET' })
+		.then(res => res.json())
+		.then(res => {
+			let { data } = res
+				
+			const sorter = ['policy', 'application', 'tech']
+			data = data[0].sort((a, b) => sorter.indexOf(a.category.toLowerCase()) - sorter.indexOf(b.category.toLowerCase()))
+
+			rmLoader()
+			addPrimaryNodes(data)
+			addSecondaryNodes([{ category: 'Business' }, { category: 'Infrastructure' }])
+			animateIn()
+		}).catch(err => console.log(err))
+	})()
+	
+	// ANIMATE EVERYTHING IN
+	function animateIn () {
+		d3.select('.orbit.secondary')
+		.transition()
+		.duration(750)
+		.delay(150)
+		.attrs({
+			'rx': function () { return d3.select(this).attr('data-rx') },
+			'ry': function () { return d3.select(this).attr('data-ry') }
+		}).style('opacity', 1)
+		d3.select('g.title .connector circle')
+		.transition()
+		.duration(500)
+		.attr('r', function () { return d3.select(this).attr('data-r') })
+		d3.select('g.title .connector line')
+		.transition()
+		.duration(500)
+		.delay(250)
+		.attr('y2', function () { return d3.select(this).attr('data-y2') })
+		d3.select('g.title text')
+		.transition()
+		.duration(1000)
+		.delay(250)
+		.style('opacity', 1)
+	}
+
+	function fetchdata (kwargs) {
+		const { category, type } = kwargs
+		clearPanel()
+		addLoader()
+
+		// const api_endpoint = new URL('https://script.google.com/macros/s/AKfycbzX-I9BL2fyU0lSlQWmWAL3rwsqR8IfaWPrtIDFNAQGMU6iL3CMJoA1tsO6bp76nPcj/exec')
+		const api_endpoint = new URL('https://script.google.com/macros/s/AKfycbzhV4xWTan7xRHNGBTWfESVCjurz69xQEsQnv1m6vNSqe1WL69ManUMjLNOq7l7uqXs0g/exec')
+		api_endpoint.searchParams.append('req', 'data')
+		api_endpoint.searchParams.append('category', category.toLowerCase())
+		api_endpoint.searchParams.append('type', type.toLowerCase())
+
+		console.log(api_endpoint.href)
+
+		fetch(api_endpoint.href, { method: 'GET' })
+		.then(res => res.json())
+		.then(res => {
+			const { data } = res
+			const { values } = data[0]
+			rmLoader()
+			addContent({ category, type, values })
+		}).catch(err => console.log(err))
+	}
+
+	function addContent (kwargs) {
+		const { category, type, values } = kwargs
+		const container = d3.select('.right-col')
+		.style('flex', '1 1 0')
+		.addElems('div', 'inner')
+
+		container.addElems('h1', 'main-title')
+		.html(category)
+		container.addElems('h2', 'sub-title')
+		.html(type)
+
+		const entries = container.addElems('div', 'entry', values)
+		
+		entries.addElems('h3', 'entry-title')
+		.html(d => `<small>[${d['contribution type']}]</small> ${d.title}`)
+		entries.addElems('small', 'contributor')
+		.html(d => `Contributed by: <strong>${d.name}, ${d.country}</strong>`)
+		entries.addElems('p', 'description')
+		.html(d => `${d.description}`)
+		entries.addElems('a', 'link', d => d['link'] ? [d] : [])
+		.attr('href', d => d['link'])
+		.html(d => d['link'])
+		entries.addElems('small', 'location')
+		.html(d => `This ${d['contribution type'].toLowerCase()} applies to: <strong>${d['country this insight applies to']}</strong>`)
+		entries.addElems('div', 'ai-format tag', d => d['format'].split(','))
+		// .html(d => `${d['type of ai involved']}`)
+		.html(d => `${d.trim()}`)
+	}
+	function clearPanel () {
+		const container = d3.select('.right-col')
+		.style('flex', '0 1 0')
+		container.selectAll('.inner').remove()
+	}
+
+	function addLoader () {
+		const ripple = d3.select('body').addElems('div', 'lds-ripple')
+		ripple.addElems('div', 'filler', [1, 2])
+	}
+	function rmLoader () {
+		d3.select('.lds-ripple').remove()
+	}
+
+	function polar2cartesian (r = 0, angle = 0, offsetx = 0, offsety = 0) {
+		angle = (angle - 90) * Math.PI / 180 // THE -90 IS TO START AT THE TOP
+		const x = r * Math.cos(angle) + offsetx
+		const y = r * Math.sin(angle) + offsety
+		return [ x, y ]
+	}
+	function positionOnEllipse (rx = 0, ry = 0, angle = 0, offsetx = 0, offsety = 0) {
+		// POSITION ON ELLIPSE SOURCE: https://stackoverflow.com/questions/51660456/how-to-get-the-edge-coordinate-of-an-ellipse-in-javascript-at-a-specific-degree
+		// angle = (angle - 90) * Math.PI / 180 // THE -90 IS TO START AT THE TOP
+		const t = Math.tan(angle + Math.atan(2 * ry / rx) / 2)
+		const px = rx * (1 - t ** 2) / (1 + t ** 2)
+		const py = ry * 2 * t / (1 + t ** 2)
+		return [ px + offsetx, py + offsety ]
+	}
+</script>
+</body>
+</html>
