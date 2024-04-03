@@ -80,13 +80,13 @@ function drawSankey () {
 
 	const svg = setupSVG({ width, height })
 
-	fetch('https://github.com/UNDP-Accelerator-Labs/AI-map/blob/main/data/acclab_data_innovation.csv')
+	fetch('data/acclab_data_innovation.csv')
 	.then(res => res.text())
 	.then(data => console.log(data))
 	.catch(err => console.log(err))
 
 	// d3.csv('../data/acclab_data_innovation.csv')
-	d3.csv('https://github.com/UNDP-Accelerator-Labs/AI-map/blob/main/data/acclab_data_innovation.csv')
+	d3.csv('data/acclab_data_innovation.csv')
 	.then(data => {
 		console.log(data)
 		// data.shuffle()
