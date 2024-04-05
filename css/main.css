@@ -239,11 +239,22 @@ h3.graphic-title {
 	padding: 0 4em 2em 4em;
 }
 h1 {
-	text-transform: uppercase;
+/*	text-transform: uppercase;*/
 	color: #005687;
 }
 h1.main-title {
+	text-align: center;
+	font-size: 36px;
+	line-height: 1.2em;
 	margin-bottom: 0;
+}
+h1.main-title small {
+	font-size: 20px;
+	line-height: 1.3em;
+}
+h1.main-title .light {
+	font-weight: normal;
+	color: #0468B1;
 }
 h2.sub-title {
 	margin-top: 0;
