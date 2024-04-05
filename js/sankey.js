@@ -14,6 +14,7 @@ const basecolors = {
 	'dark-grey': '#000000',
 	'mid-grey': '#646464',
 	'light-grey': '#969696',
+	'light-2': '#e5e5e5',
 }
 const colors = [
 	basecolors['mid-blue'],
@@ -80,18 +81,9 @@ function drawSankey () {
 
 	const svg = setupSVG({ width, height })
 
-	fetch('data/acclab_data_innovation.csv')
-	.then(res => res.text())
-	.then(data => console.log(data))
-	.catch(err => console.log(err))
-
-	// d3.csv('../data/acclab_data_innovation.csv')
 	d3.csv('data/acclab_data_innovation.csv')
 	.then(data => {
-		console.log(data)
-		// data.shuffle()
 		const levels = ['Aggregate datasource', 'Technique', 'Area', 'Lab']//.reverse()
-		// const levels = ['Lab', 'Datasource', 'Aggregate datasource', 'Area'].reverse()
 		
 		const lists = levels.map(d => {
 			return {
@@ -107,79 +99,10 @@ function drawSankey () {
 		})	
 
 		const y = d3.scaleLinear()
-			.range([padding, height - padding * 2])
+			.range([padding * 1.5, height - padding * 2])
 			.domain([0, levels.length - 1])
 
-		const rows = svg.addElems('g', 'level', levels)
-		.attr('transform', (d, i) => `translate(${[0, y(i)]})`)
-		const base = rows.addElems('g', 'base', d => {
-			const entries = lists.find(c => c.key === d).values
-			return entries.map(c => {
-				const obj = {}
-				obj.level = levels.indexOf(d)
-				obj.value = c
-				return obj
-			})
-		}).attr('transform', (d, i) => {
-			let y = 0
-			
-			if (offsetFirstRow) {
-				if (d.level === 0) {
-					if (i % 2 !== 0) y = -45
-					else y = -15
-				} else if (d.level % 3 === 0) {
-					if (i % 2 !== 0) y = 60
-					else y = 15
-				}
-			} else {
-				if (d.level === 0) {
-					y = -15
-				} else if (d.level % 3 === 0) {
-					if (i % 2 !== 0) y = 60
-					else y = 15
-				}
-			}
-			
-			return `translate(${[x[d.level](i + 1), y]})`
-		})
-
-		const multiline = true
-		if (multiline) {
-			base.addElems('text')
-			.styles({
-				'text-anchor': 'middle',
-				'font-face': 'Helvetica, Arial, Sans-serif',
-				'font-size': '12px',
-				'fill': basecolors['mid-grey'],
-			}).on('mouseover', function (d) {
-				const connection = d3.selectAll('path.connection').filter(c => c.target === d.value);
-				highlight(connection);
-			}).on('mouseout', _ => {
-				resetHighlight();
-			}).addElems('tspan', 'line', d => {
-				const maxwidth = (width - padding * 2) / (Math.max(...x[d.level].domain()) + 2);
-				const lines = findBestTextDisplay(svg, d.value, maxwidth);
-				return lines
-			}).attrs({
-				'x': 0,
-				'dy': (d, i) => i === 0 ? 0 : 12 * 1.3,
-			}).text(d => d)
-		} else {
-			base.addElems('text')
-			.styles({
-				'text-anchor': 'middle',
-				'font-face': 'Helvetica, Arial, Sans-serif',
-				'font-size': '12px',
-				'fill': basecolors['mid-grey'],
-			}).text(d => d.value)
-			.on('mouseover', function (d) {
-				const connection = d3.selectAll('path.connection').filter(c => c.target === d.value);
-				highlight(connection);
-			}).on('mouseout', _ => {
-				resetHighlight();
-			})
-		}
-
+		
 		let hierarchy = []
 		levels.forEach((d, i) => {
 			if (i > 0) {
@@ -237,61 +160,231 @@ function drawSankey () {
 			'stroke-width': d => w(d.count),
 			'stroke-linecap': 'round',
 			'stroke-opacity': .5
-		}).on('mouseover', function () {
+		})
+		/*.on('mouseover', function () {
 			const sel = d3.select(this);
 			highlight(sel);
 		}).on('mouseout', _ => {
 			resetHighlight();
+		})*/
+
+		const rows = svg.addElems('g', 'level', levels)
+		.attr('transform', (d, i) => `translate(${[0, y(i)]})`)
+		const base = rows.addElems('g', 'base', d => {
+			const entries = lists.find(c => c.key === d).values
+			return entries.map(c => {
+				const obj = {}
+				obj.level = levels.indexOf(d)
+				obj.value = c
+				return obj
+			})
+		}).attr('transform', (d, i) => {
+			let y = 0
+			
+			if (offsetFirstRow) {
+				if (d.level === 0) {
+					if (i % 2 !== 0) y = -45
+					else y = -15
+				} else if (d.level % 3 === 0) {
+					if (i % 2 !== 0) y = 60
+					else y = 15
+				}
+			} else {
+				if (d.level === 0) {
+					y = -15
+				} else if (d.level % 3 === 0) {
+					if (i % 2 !== 0) y = 60
+					else y = 15
+				}
+			}
+			
+			return `translate(${[x[d.level](i + 1), y]})`
 		})
 
-	function highlight (sel) {
-		// let { level_id, source, target } = sel.datum()
-		let level_id = sel.data().unique('level_id', true)[0]
-		let source = sel.data().unique('source', true)
-		let target = sel.data().unique('target', true)
-
-		sel.classed('highlight', true)
-		.classed('dim', false)
-		.moveToFront();
-
-		if (level_id === levels.length - 1) { // IF A LEAF IS INSPECTED
-			const branch = data.filter(c => {
-				return target.includes(c[levels[level_id]]) && source.includes(c[levels[level_id - 1]])
-			})
-			d3.selectAll('path.connection')
-			.classed('dim', c => {
-				return levels.every((b, k) => {
-					if (k < levels.length -1) {
-						return !(branch.some(a => a[b] === c.source && a[levels[k + 1]] === c.target));
-					} else return true;
-				})
-			})
-			d3.selectAll('path.connection:not(.dim)')
-			.moveToFront()
-			.classed('highlight', true);
+		const multiline = true
+		if (multiline) {
+			base.addElems('text')
+			.styles({
+				'text-anchor': 'middle',
+				'font-face': 'Noto Sans',
+				'font-size': '12px',
+				'fill': basecolors['light-2'],
+				'cursor': d => d.level === levels.length - 1 ? 'pointer' : null,
+			}).addElems('tspan', 'line', d => {
+				const maxwidth = (width - padding * 2) / (Math.max(...x[d.level].domain()) + 2);
+				const lines = findBestTextDisplay(svg, d.value, maxwidth);
+				return lines
+			}).attrs({
+				'x': 0,
+				'dy': (d, i) => i === 0 ? 0 : 12 * 1.3,
+			}).text(d => d)
 		} else {
-			while (level_id >= 0) {
-				if (!Array.isArray(source)) source = [source]
-				const prevPath = d3.selectAll('path.connection').filter(c => source.includes(c.target))
-				.moveToFront()
-				.classed('highlight', true);
-				source = prevPath.data().unique('source', true);
-				d3.selectAll('path.connection:not(.highlight)')
-				.classed('dim', true);
-				
-				level_id --
-			}
+			base.addElems('text')
+			.styles({
+				'text-anchor': 'middle',
+				'font-face': 'Noto Sans',
+				'font-size': '12px',
+				'fill': basecolors['light-2'],
+				'cursor': d => d.level === levels.length - 1 ? 'pointer' : null,
+			}).text(d => d.value)
+			.on('mouseover', function (d) {
+				const connection = d3.selectAll('path.connection').filter(c => c.target === d.value);
+				highlight(connection);
+			}).on('mouseout', _ => {
+				resetHighlight();
+			})
 		}
 
-		const nodes = d3.selectAll('path.connection.highlight').data().map(d => [d.source, d.target]).flat().unique()
-		d3.selectAll('g.base')
-		.classed('highlight', c => nodes.includes(c.value))
-		.classed('dim', c => !nodes.includes(c.value))
-	}
-	function resetHighlight () {
-		d3.selectAll('path.connection, g.base')
-		.classed('highlight dim', false);
-	}
+		base.each(function () {
+			const sel = d3.select(this)
+			const text = sel.select('text')
+			const { width: txt_width, height: txt_height } = text.node().getBBox();
+
+			sel.addElems('rect', 'interaction-padding')
+				.attrs({
+					'width': txt_width + 50,
+					'height': txt_height + 30,
+					'x': -(txt_width + 50) / 2,
+					'y': -(txt_height + 30) / 2,
+				}).styles({
+					'fill': 'transparent',
+					// 'stroke': 'orange',
+					'cursor': 'pointer',
+				})
+		}).on('mouseover', function (d) {
+			const connection = d3.selectAll('path.connection').filter(c => c.source === d.value || c.target === d.value);
+			highlight(connection);
+		}).on('mouseout', function () {
+			const { toElement } = d3.event;
+			if (!d3.select(toElement)?.hasAncestor(this)) resetHighlight();
+		}).on('click', function (d) {
+			if (d.level !== levels.length - 1) return false
+
+			const sel = d3.select(this).moveToFront();
+			const text = sel.select('text').moveToFront();
+			const parentLevel = d3.select(this).findAncestor('level').moveToFront();
+			const { width: txt_width, height: txt_height } = text.node().getBBox();
+			const { left } = text.node().getBoundingClientRect();
+			const { value, level } = d
+			const paths = data.filter(c => {
+				return c[levels[level]] === value
+			}).map((c, j) => {
+				return { label: levels.reduce((acc, val, idx) => {
+					if (idx < levels.length - 1) {
+						if (c[val].length > 15) return acc += `${c[val].slice(0, 15)}&hellip;&mdash;`;
+						else return acc += `${c[val]}&mdash;`;
+					} else {
+						if (c[val].length > 15) return acc += `${c[val].slice(0, 15)}&hellip;`;
+						else return acc += `${c[val]}`;
+					}
+				}, '&#x1F517; '), datasource: c['Aggregate datasource'], link: c['Link'], line: j }
+			}).filter(c => c.link?.length)
+
+			const bubble = sel.addElems('g', 'bubble', paths.length ? [paths] : [])
+			const labels = bubble.addElems('text')
+				.styles({
+					'text-anchor': 'start',
+					'font-face': 'Noto Sans',
+					'font-size': '12px',
+					// 'stroke': d => {
+					// 	const { values } = lists.find(c => c.key === 'Aggregate datasource')
+					// 	if (values.includes(d.values[0]['Aggregate datasource'])) return colors[values.indexOf(d.values[0]['Aggregate datasource'])]
+					// 	else if (values.includes(d.target)) return colors[values.indexOf(d.target)]
+						
+					// },
+				})
+			labels.addElems('a', 'link', c => c)
+				.attrs({
+					'xlink:href': c => c.link,
+					'target': '_blank',
+				})
+			.addElems('tspan', 'link')
+				.attrs({
+					'x': 0,
+					'dy': c => c.line === 0 ? 0 : 12 * 1.7,
+				}).styles({
+					'fill': c => {
+						const { values } = lists.find(c => c.key === 'Aggregate datasource');
+						return colors[values.indexOf(c.datasource)];
+					}
+				}).html(c => c.label)
+			// .on('mouseover', c => {
+			// 	console.log(c)
+			// });
+
+			if (labels.size()) {
+				const { width: bubble_w, height: bubble_h } = labels.node().getBBox();
+				
+				bubble.insertElems('text', 'rect', 'interaction-padding')
+					.attrs({
+						'width': bubble_w + 50,
+						'height': bubble_h + 50,
+						'x': -25,
+						'y': (-bubble_h / paths.length) - 25,
+					}).styles({
+						'fill': 'transparent',
+						// 'stroke': 'orange',
+					});
+				bubble.insertElems('text', 'rect', 'label-bg')
+					.attrs({
+						'width': bubble_w + 27,
+						'height': bubble_h + 27,
+						'x': -10,
+						'y': (-bubble_h / paths.length) - 7,
+					}).styles({
+						'fill': '#FFF'
+					});
+				bubble.attr('transform', _ => {
+					let x = (bubble_w + txt_width / 2 + 30) * -1
+					let y = 0
+					if (left <= width / 2) x = txt_width / 2 + 30
+					if (paths.length > 1) y = -bubble_h * .25
+					return `translate(${[x, y]})`
+				});
+			}
+		})
+
+		function highlight (sel) {
+			const d = sel.data();
+			let level_id = d.unique('level_id', true)[0];
+			let source = d.unique('source', true);
+			let target = d.unique('target', true);
+
+			const highlights = d.map(c => c.values)
+			.flat()
+			.map(c => {
+				const connections = []
+				const arr = levels.map((b, k) => { return { level: k, value: c[b] } })
+				arr.forEach(b => {
+					if (b.level > 0) {
+						arr.filter(a => a.level === b.level - 1)
+						.forEach(a => {
+							connections.push(`${a.value}---${b.value}`)
+						})
+					}
+				})
+				return { nodes: arr.map(a => a.value), connections }
+			})
+			const nodesToHighlight = highlights.map(c => c.nodes).flat().unique()
+			const connectionsToHighlight = highlights.map(c => c.connections).flat().unique()
+
+			// sel.classed('highlight', true)
+			// .classed('dim', false)
+			// .moveToFront();
+
+			d3.selectAll('path.connection')
+			.classed('highlight', c => connectionsToHighlight.includes(c.key))
+			.classed('dim', c => !connectionsToHighlight.includes(c.key));
+
+			d3.selectAll('g.base')
+			.classed('highlight', c => nodesToHighlight.includes(c.value))
+			.classed('dim', c => !nodesToHighlight.includes(c.value));
+		}
+		function resetHighlight () {
+			d3.selectAll('path.connection, g.base')
+			.classed('highlight dim', false);
+			d3.selectAll('g.bubble').remove();
+		}
 
 	}).catch(err => console.log(err))
 }

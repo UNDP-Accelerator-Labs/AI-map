@@ -32,7 +32,11 @@ d3.selection.prototype.findAncestor = function (_target) {
 }
 d3.selection.prototype.hasAncestor = function (_target) {
 	if (this.node().nodeName === 'BODY') return false
-	if (this.classed(_target) || this.node().nodeName === _target?.toUpperCase()) return true
+	if (typeof _target === 'string') {
+		if (this.classed(_target) || this.node().nodeName === _target?.toUpperCase()) return true
+	} else {
+		if (this.node() === _target) return true
+	}
 	return d3.select(this.node().parentNode)?.hasAncestor(_target);
 }
 d3.selection.prototype.moveToFront = function() {
