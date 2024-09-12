@@ -20,7 +20,8 @@ const colors = [
 	basecolors['mid-blue'],
 	basecolors['mid-yellow'],
 	basecolors['light-red'],
-	basecolors['light-green']
+	basecolors['light-green'],
+	basecolors['light-yellow']
 ]
 
 const offsetFirstRow = false
