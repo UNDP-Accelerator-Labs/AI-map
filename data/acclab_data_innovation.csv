@@ -1,6 +1,6 @@
 ﻿Technique,Aggregate datasource,Datasource,Area,Application,Lab,Link,UNDP region,Note
 Object detection,Earth observation,Drone imagery,Precision agriculture and pastoralism,Crop disease detection,Cameroon,https://www.undp.org/cameroon/blog/will-drone-and-artificial-intelligence-help-increase-income-cameroonian-cocoa-planters,RBA,
-Object detection,Earth observation,Drone imagery,Precision agriculture and pastoralism,Crop disease detection,Cabo verde,,RBA,
+Object detection,Image data,Photo/ video,Precision agriculture and pastoralism,Crop disease detection,Cabo verde,,RBA,
 Object detection,Image data,Photo/ video,Precision agriculture and pastoralism,Pest control,Zimbabwe,https://www.undp.org/acceleratorlabs/publications/labs-20-evolving-global-research-and-development-capability-sdgs,RBA,
 Object detection,Earth observation,Satellite imagery,Pollution,Dump site detection,Guatemala,,RBLAC,
 Object detection,Earth observation,Satellite imagery,Pollution,Dump site detection,Serbia,https://www.undp.org/serbia/blog/can-artificial-intelligence-and-satellite-images-help-make-our-rivers-free-waste,RBEC,Low accuracy because of lack of training data
