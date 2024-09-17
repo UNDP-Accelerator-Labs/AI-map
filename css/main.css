@@ -288,10 +288,9 @@ div.tag {
 	margin: 5px 5px 5px 0;
 }
 a {
-	display: block;
 	margin-bottom: 1em;
 	color: #B4DC28;
-	font-size: 12px;
+/*	font-size: 18px;*/
 	outline: none;
 }
 
